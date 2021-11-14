@@ -11,8 +11,8 @@ import HomePage from './pages/HomePage';
 
 const MyRoutes = () => {
     return (
-        <AuthContextProvider>
         <AdminContextProvider>
+        <AuthContextProvider>
         <BrowserRouter>
             <NavBar />
             <Routes>

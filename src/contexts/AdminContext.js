@@ -21,5 +21,5 @@ const AdminContextProvider = () => {
         </div>
     );
 };
-//qwe
+
 export default AdminContextProvider;

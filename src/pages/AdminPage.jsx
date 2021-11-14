@@ -52,7 +52,7 @@ export default function AddPage() {
             <CardMedia
                 component="img"
                 height="194"
-                image="https://www.wallpaperup.com/uploads/wallpapers/2017/10/20/1123600/7ba37c58bf39941eac8faf86ad92c0f8-1400.jpg"
+                image="https://dodopizza-a.akamaihd.net/static/Img/Products/0d7a49985ddd45b3aaaf28c903d9b9cb_292x292.jpeg "
                 alt="Paella dish"
             />
             <CardContent>

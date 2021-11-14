@@ -1,10 +1,10 @@
 import React from 'react';
-import MyCarousel from '../components/Carousel';
+// import MyCarousel from '../components/Carousel';
 
 const HomePage = () => {
     return (
         <div>
-            <MyCarousel />
+            {/* <MyCarousel /> */}
         </div>
     );
 };

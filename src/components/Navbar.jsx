@@ -9,12 +9,17 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { authContext } from '../contexts/AuthContext';
+import { Button } from '@mui/material';
+import SignUpModal from './auth/SignUpModal';
+import SignInModal from './auth/SignInModal';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 
@@ -59,11 +64,22 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar() {
+    const { user, logOut } = React.useContext(authContext)
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+    
+    const [show, setShow] = React.useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const [showLogin, setShowLogin] = React.useState(false);
+    const handleCloseLogin = () => setShowLogin(false);
+    const handleShowLogin = () => setShowLogin(true);
+
+
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -101,6 +117,7 @@ export default function NavBar() {
         >
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
             <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem onClick={handleMenuClose} onClick={logOut}>Log Out</MenuItem>
         </Menu>
     );
 
@@ -156,17 +173,53 @@ export default function NavBar() {
         </Menu>
     );
 
+    let profile;
+    if (user) {
+        profile = (
+        <IconButton
+            size="large"
+            edge="end"
+            aria-label="account of current user"
+            aria-controls={menuId}
+            aria-haspopup="true"
+            onClick={handleProfileMenuOpen}
+            color="inherit"
+        >
+            <AccountCircle />
+        </IconButton>
+        )
+    } else {
+        profile = ( 
+        <> 
+                <Button color="inherit" variant="text" onClick={handleShowLogin}>Sign In</Button>
+                <Button color="inherit" variant="text" onClick={handleShow}>Sign Up</Button>
+            </>
+            )
+    }
+ 
+
+
+
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar style={{backgroundColor: 'red'}} position="static">
+            <AppBar style={{ backgroundColor: 'rgb(213, 65, 12)' }} position="static">
                 <Toolbar>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="open drawer"
+                        sx={{ mr: 2 }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant="h6"
                         noWrap
                         component="div"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
                     >
-                        Makers Food<LocationOnIcon />
+                        Makers food <LocationOnIcon/>
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
@@ -181,7 +234,7 @@ export default function NavBar() {
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                             <Badge badgeContent={4} color="error">
-                              <ShoppingCart/>
+                                <ShoppingCart/>
                             </Badge>
                         </IconButton>
                         <IconButton
@@ -193,17 +246,8 @@ export default function NavBar() {
                                 <NotificationsIcon />
                             </Badge>
                         </IconButton>
-                        <IconButton
-                            size="large"
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-controls={menuId}
-                            aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
-                            color="inherit"
-                        >
-                            <AccountCircle />
-                        </IconButton>
+                        {profile}
+                        
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -221,7 +265,8 @@ export default function NavBar() {
             </AppBar>
             {renderMobileMenu}
             {renderMenu}
+            <SignUpModal handleClose={handleClose} show={show} />
+            <SignInModal handleCloseLogin={handleCloseLogin} showLogin={showLogin} />
         </Box>
     );
-    
 }

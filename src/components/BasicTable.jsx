@@ -23,13 +23,11 @@ export default function BasicTable() {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell align="right">Description</TableCell>
-                <TableCell align="right">Photo</TableCell>
-                <TableCell align="right">Price</TableCell>
-                <TableCell align="right">Color</TableCell>
-                <TableCell align="right">Brand</TableCell>
-                <TableCell align="right">Model</TableCell>
+                <TableCell align="right">Изображение</TableCell>
+                <TableCell>Название продукта</TableCell>
+                <TableCell align="right">Состав</TableCell>
+                <TableCell align="right">Цена</TableCell>
+                <TableCell align="right">См/грамм</TableCell>
                 <TableCell align="right">#</TableCell>
                 <TableCell align="right">#</TableCell>
               </TableRow>
@@ -40,31 +38,29 @@ export default function BasicTable() {
                   key={phone.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
+                  <TableCell align="right">
+                    <img width="70" src={phone.image} alt="phone" />
+                  </TableCell>
                   <TableCell component="th" scope="row">
                     {phone.name}
                   </TableCell>
                   <TableCell align="right">
-                    <Tooltip title={phone.description}>
-                      <p>{phone.description.slice(0, 30)}...</p>
+                    <Tooltip title={phone.composition}>
+                      <p>{phone.composition.slice(0, 30)}...</p>
                     </Tooltip>
                   </TableCell>
-                  <TableCell align="right">
-                    <img width="50" src={phone.image} alt="phone" />
-                  </TableCell>
                   <TableCell align="right">{phone.price}</TableCell>
-                  <TableCell align="right">{phone.color}</TableCell>
-                  <TableCell align="right">{phone.brand}</TableCell>
-                  <TableCell align="right">{phone.model}</TableCell>
+                  <TableCell align="right">{phone.gram}</TableCell>
                   <TableCell align="right">
                     <Link to={`/admin/edit/${phone.id}`}>
                       <Button color="warning" variant="outlined">
-                        Edit
+                        Изменить
                       </Button>
                     </Link>
                   </TableCell>
                   <TableCell align="right">
                     <Button onClick={() => deleteProduct(phone.id)}>
-                      Delete
+                      Удалить
                     </Button>
                   </TableCell>
                 </TableRow>

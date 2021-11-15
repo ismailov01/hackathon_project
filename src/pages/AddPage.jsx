@@ -7,41 +7,28 @@ import { useNavigate } from "react-router";
 
 const AddPage = () => {
   const schema = yup.object({
-    name: yup
-      .string()
-      .min(3, "minimal 3 symbol")
-      .max(30, "Maximal 30 symbol ")
-      .required("Поле обязательно для заполнения"),
-    description: yup
-      .string()
-      .min(10, "minimal 10 symbol")
-      .max(255, "Maximal 255 symbol ")
-      .required("Поле обязательно для заполнения"),
     image: yup
       .string()
-      // .min(3, "minimal 3 symbol")
-      // .max(30, 'Maximal 30 symbol ')
-      .required("Поле обязательно для заполнения"),
+      .required("Данное поле обязательно"),
+    name: yup
+      .string()
+      .min(3, "Минимальное 3 символа")
+      .max(30, "Максимальное 30 символов")
+      .required("Данное поле обязательно"),
+    composition: yup
+      .string()
+      .min(10, "Минимальное 10 символов")
+      .max(255, "Максимальное 255 символов")
+      .required("Данное поле обязательно"),
     price: yup
       .number()
-      .min(3, "minimal 3 symbol")
-      // .max(30, 'Maximal 30 symbol ')
-      .required("Поле обязательно для заполнения"),
-    color: yup
+      .min(3, "Минимальное 3 символа")
+      .required("Данное поле обязательно"),
+    gram: yup
       .string()
-      // .min(3, "minimal 3 symbol")
-      // .max(30, 'Maximal 30 symbol ')
-      .required("Поле обязательно для заполнения"),
-    brand: yup
-      .string()
-      // .min(3, "minimal 3 symbol")
-      // .max(30, 'Maximal 30 symbol ')
-      .required("Поле обязательно для заполнения"),
-    model: yup
-      .string()
-      .min(1, "minimal 1 symbol")
-      .max(30, "Maximal 30 symbol ")
-      .required("Поле обязательно для заполнения"),
+      .min(1, "Минимальный 1 символ")
+      .max(50, "Максимальное 50 символов")
+      .required("Данное поле обязательно"),
   });
 
   const { addProduct } = useContext(adminContext)
@@ -52,44 +39,22 @@ const AddPage = () => {
   }
   return (  
     <div className="add-page">
-      <h2>Add phone</h2>
+      <h2>Добавить продукт</h2>
       <Formik 
         validationSchema={schema}
         onSubmit={handleSubmit}
         initialValues={{
+          image: '',
             name: '',
-            description: '',
-            image: '',
+            composition: '',
             price: '',
-            color: '',
-            brand: '',
-            model: ''
+            gram: ''
         }}
       >
         {({ handleSubmit, handleChange, values, touched, errors }) => (
           <form onSubmit={handleSubmit}>
             <TextField
-              label="Phone name"
-              type="text"
-              variant="standard"
-              name="name"
-              value={values.name}
-              error={!!errors.name && touched.name}
-              helperText={touched.name ? errors.name : ''}
-              onChange={handleChange}
-            />
-            <TextField
-              label="Phone description"
-              type="text"
-              variant="standard"
-              name="description"
-              value={values.description}
-              error={!!errors.description && touched.description}
-              helperText={touched.description ? errors.description : ''}
-              onChange={handleChange}
-            />
-            <TextField
-              label="Phone image"
+              label="Изображение"
               type="text"
               variant="standard"
               name="image"
@@ -99,7 +64,28 @@ const AddPage = () => {
               onChange={handleChange}
             />
             <TextField
-              label="Phone price"
+              label="Название продукта"
+              type="text"
+              variant="standard"
+              name="name"
+              value={values.name}
+              error={!!errors.name && touched.name}
+              helperText={touched.name ? errors.name : ''}
+              onChange={handleChange}
+            />
+            <TextField
+              label="Состав:"
+              type="text"
+              variant="standard"
+              name="composition"
+              value={values.composition}
+              error={!!errors.composition && touched.composition}
+              helperText={touched.composition ? errors.composition : ''}
+              onChange={handleChange}
+            />
+            
+            <TextField
+              label="Цена"
               type="number"
               variant="standard"
               name="price"
@@ -109,40 +95,20 @@ const AddPage = () => {
               onChange={handleChange}
             />
             <TextField
-              label="Phone color"
+              label="См/грамм"
               type="text"
               variant="standard"
-              name="color"
-              value={values.color}
-              error={!!errors.color && touched.color}
-              helperText={touched.color ? errors.color : ''}
-              onChange={handleChange}
-            />
-            <TextField
-              label="Phone brand"
-              type="text"
-              variant="standard"
-              name="brand"
-              value={values.brand}
-              error={!!errors.brand && touched.brand}
-              helperText={touched.brand ? errors.brand : ''}
-              onChange={handleChange}
-            />
-            <TextField
-              label="Phone model"
-              type="text"
-              variant="standard"
-              name="model"
-              value={values.model}
-              error={!!errors.model && touched.model}
-              helperText={touched.model ? errors.model : ''}
+              name="gram"
+              value={values.gram}
+              error={!!errors.gram && touched.gram}
+              helperText={touched.gram ? errors.gram : ''}
               onChange={handleChange}
             />
             <Button 
             variant="contained" 
             color="primary" 
             type="submit">
-            Add phone
+            Добавить продукт
             </Button>
           </form>
         )}

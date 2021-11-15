@@ -22,7 +22,7 @@ const MyRoutes = () => {
                 <Route path="/admin/edit/:id" element = {<EditPage />} />
                 
             </Routes>
-            <Footer/>
+            {/* <Footer/> */}
         </BrowserRouter>
         </AuthContextProvider>
         </AdminContextProvider>

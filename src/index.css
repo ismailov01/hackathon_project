@@ -26,3 +26,36 @@ code {
 .add-page form button, .edit-page form button {
   margin-top: 15px;
 }
+
+.home-page {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.detail-image{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+
+.detail-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.detail-image img {
+  width: 90%;
+  object-fit: contain;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+
+.pagination ul {
+  display: flex;
+  list-style-type: none;
+}

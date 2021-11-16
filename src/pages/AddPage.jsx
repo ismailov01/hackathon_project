@@ -15,6 +15,11 @@ const AddPage = () => {
       .min(3, "Минимальное 3 символа")
       .max(30, "Максимальное 30 символов")
       .required("Данное поле обязательно"),
+    category: yup
+      .string()
+      .min(2, "Минимальное 2 символа")
+      .max(30, "Максимальное 30 символов")
+      .required("Данное поле обязательно"),
     composition: yup
       .string()
       .min(10, "Минимальное 10 символов")
@@ -46,6 +51,7 @@ const AddPage = () => {
         initialValues={{
           image: '',
             name: '',
+            category: '',
             composition: '',
             price: '',
             gram: ''
@@ -71,6 +77,16 @@ const AddPage = () => {
               value={values.name}
               error={!!errors.name && touched.name}
               helperText={touched.name ? errors.name : ''}
+              onChange={handleChange}
+            />
+            <TextField
+              label="Категория"
+              type="text"
+              variant="standard"
+              name="category"
+              value={values.category}
+              error={!!errors.category && touched.category}
+              helperText={touched.category ? errors.category : ''}
               onChange={handleChange}
             />
             <TextField

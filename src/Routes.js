@@ -13,6 +13,7 @@ import ClientContextProvider from './contexts/ClientContext';
 import DetailPage from './pages/DetailPage';
 import CartPage from './pages/CartPage';
 
+
 const MyRoutes = () => {
     return (
         <AuthContextProvider>

@@ -23,6 +23,9 @@ import SignInModal from './auth/SignInModal';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+import { clientContext } from '../contexts/ClientContext';
+
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -69,7 +72,7 @@ export default function NavBar() {
     const { user, logOut } = React.useContext(authContext)
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
+    const {getProducts, productCountInCart} = React.useContext(clientContext)
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -244,11 +247,13 @@ export default function NavBar() {
                     </Search>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        <Link to="/cart">
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
+                            <Badge badgeContent={productCountInCart} color="error">
                                 <ShoppingCart/>
                             </Badge>
                         </IconButton>
+                        </Link>
                         <IconButton
                             size="large"
                             aria-label="show 17 new notifications"

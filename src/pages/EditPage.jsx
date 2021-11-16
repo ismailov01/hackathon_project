@@ -10,6 +10,7 @@ const EditPage = () => {
   const schema = yup.object({
     image: yup.string().required("Обязательно"),
     name: yup.string().min(3).max(30).required("Обязательно"),
+    category: yup.string().min(2).max(30).required("Обязательно"),
     composition: yup.string().min(10).max(255).required("Обязательно"),
     price: yup.number().min(3).required("Обязательно"),
    gram: yup.string().min(1).max(30).required("Обязательно"),
@@ -57,6 +58,16 @@ const EditPage = () => {
                   value={values.name}
                   error={!!errors.name && touched.name}
                   helperText={touched.name ? errors.name : ""}
+                  onChange={handleChange}
+                />
+                <TextField
+                  label="Категория продукта"
+                  type="text"
+                  variant="standard"
+                  name="category"
+                  value={values.category}
+                  error={!!errors.category && touched.category}
+                  helperText={touched.category ? errors.category : ""}
                   onChange={handleChange}
                 />
                 <TextField

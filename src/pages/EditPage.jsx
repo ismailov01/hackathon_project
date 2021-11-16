@@ -24,7 +24,6 @@ const EditPage = () => {
   }, [])
   const navigate = useNavigate()
 
-
   return (
     <div className="edit-page">
       <h2>Изменить продукт</h2>

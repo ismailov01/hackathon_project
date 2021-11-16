@@ -26,7 +26,6 @@ import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { clientContext } from '../contexts/ClientContext';
 
-
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -81,6 +80,7 @@ export default function NavBar() {
         object.set(key, value) 
         let newUrl = `${window.location.pathname}?${object.toString()}`
         navigate(newUrl)
+        getProducts()
     }
 
     const [show, setShow] = React.useState(false);
@@ -231,6 +231,7 @@ export default function NavBar() {
                         sx={{ display: { xs: 'none', sm: 'block' } }}
                         onClick={() => {
                             navigate("/")
+                            getProducts()
                         }}
                    >
                         Makers food <LocationOnIcon/>

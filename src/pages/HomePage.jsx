@@ -35,7 +35,7 @@ const HomePage = () => {
   return (
     <>
     <div className="home-page">
-      <div className="sidebar">
+      <div className="sidebar" >
         <FormControl component="fieldset">
           <FormLabel component="legend">Категория</FormLabel>
           <RadioGroup
@@ -44,6 +44,27 @@ const HomePage = () => {
             name="radio-buttons-group"
             onChange={(e) => filterProducts("category", e.target.value)}
           >
+                          <FormControlLabel
+
+                              value="Завтраки"
+                              control={<Radio />}
+                              label="Завтраки"
+                          /> <img width='100px' src=""  />
+                          <FormControlLabel
+                              value="Супы"
+                              control={<Radio />}
+                              label="Супы"
+                          />
+                          <FormControlLabel
+                              value="Салаты"
+                              control={<Radio />}
+                              label="Салаты"
+                          />
+                          <FormControlLabel
+                              value="Вторые блюда"
+                              control={<Radio />}
+                              label="Вторые блюда"
+                          />
            <FormControlLabel
                 value="Пицца"
                 control={<Radio />}
@@ -64,6 +85,57 @@ const HomePage = () => {
                 control={<Radio />}
                 label="Комбо"
               />
+                          <FormControlLabel
+                              value="Шаурма"
+                              control={<Radio />}
+                              label="Шаурма"
+                          />
+                          <FormControlLabel
+                              value="Гамбургер"
+                              control={<Radio />}
+                              label="Гамбургер"
+                          />
+                          <FormControlLabel
+                              value="Хот Дог"
+                              control={<Radio />}
+                              label="Хот Дог"
+                          />
+                          <FormControlLabel
+                              value="Гарниры"
+                              control={<Radio />}
+                              label="Гарниры"
+                          />
+                          <FormControlLabel
+                              value="Стейки"
+                              control={<Radio />}
+                              label="Стейки"
+                          />
+                          <FormControlLabel
+                              value="Паста"
+                              control={<Radio />}
+                              label="Паста"
+                          />
+                          <FormControlLabel
+                              value="Боул"
+                              control={<Radio />}
+                              label="Боул"
+                          />
+                          <FormControlLabel
+                              value="Горячие напитки"
+                              control={<Radio />}
+                              label="Горячие напитки"
+                          />
+                          <FormControlLabel
+                              value="Холодные напитки"
+                              control={<Radio />}
+                              label="Холодные напитки"
+                          />
+                  
+                          <FormControlLabel
+                              value="Дессерты"
+                              control={<Radio />}
+                              label="Дессерты"
+                          />
           </RadioGroup>
         </FormControl>
       </div>

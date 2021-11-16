@@ -7,6 +7,9 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { clientContext } from "../contexts/ClientContext";
+import { Button } from '@mui/material';
+import { Link } from "react-router-dom";
+
 
 const CartPage = () => {
   const { getCart, cart, changeCountProduct } = useContext(clientContext);
@@ -17,28 +20,33 @@ const CartPage = () => {
 
   return (
     <div>
-      <h2>Basket</h2>
+      <h2 style={{color: 'red', display: 'flex', justifyContent: 'center'}}>Корзина</h2>
       <div>
         {cart ? (
           cart.products.length > 0 ? (
+            <>
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Name</TableCell>
-                    <TableCell align="right">Photo</TableCell>
-                    <TableCell align="right">Count</TableCell>
-                    <TableCell align="right">Sum</TableCell>
+                    <TableCell>Название</TableCell>
+                    <TableCell>Категория</TableCell>
+                    <TableCell align="right">Изображение</TableCell>
+                    <TableCell align="right">Количество</TableCell>
+                    <TableCell align="right">Сумма</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {cart.products.map((item) => (
                     <TableRow
-                      key={item.id}
-                      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                    key={item.id}
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                     >
                       <TableCell component="th" scope="row">
                         {item.name}
+                      </TableCell>
+                      <TableCell component="th" scope="row">
+                        {item.category}
                       </TableCell>
                       <TableCell align="right">
                         <img width="50" src={item.image} alt="photo" />
@@ -50,24 +58,28 @@ const CartPage = () => {
                           onChange={(e) =>
                             changeCountProduct(e.target.value, item.id)
                           }
-                        />
+                          />
                       </TableCell>
-                      <TableCell align="right">{item.subPrice} som</TableCell>
+                      <TableCell align="right">{item.subPrice} сом</TableCell>
                     </TableRow>
                   ))}
                   <TableRow>
-                    <TableCell colSpan={3} align="right">
-                      Total:
+                    <TableCell colSpan={4} align="right">
+                      Итого:
                     </TableCell>
                     <TableCell colSpan={1} align="right">
-                      {cart.totalPrice} som
+                      {cart.totalPrice} сом
                     </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
             </TableContainer>
+            <Link to="/credit/card">
+            <Button variant="contained" style={{position: 'fixed', right: '0', marginRight: '20px'}} >Оплатить</Button>
+            </Link>
+        </>
           ) : (
-            <h2>The basket is empty</h2>
+            <h2>Корзина пуста</h2>
           )
         ) : (
           <h2>Loading...</h2>

@@ -5,10 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./CreditCardPage.css";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
+import { useNavigate } from "react-router";
 
 
 const CreditCardPage = () => {
     const { handleChange, handleFocus, handleSubmit, values, errors } = useForm();
+    const navigate = useNavigate()
     return (
       <div className="container" >
         < div className="box justify-content-center align-items-center" >
@@ -22,7 +24,7 @@ const CreditCardPage = () => {
                         number={values.cardNumber}
                     />
     <Form onSubmit={handleSubmit}>
-        <Form.Group>
+        <Form.Group style={{margin: '10px'}}>
             <Form.Control
                 type="text"
                 id="cardName"
@@ -47,25 +49,10 @@ const CreditCardPage = () => {
                 onFocus={handleFocus}
                 isValid={errors.number}
             />
-        </Form.Group>
+        </Form.Group >
         <Row>
             <Col>
-                <Form.Group>
-                    <Form.Control
-                        type="text"
-                        name="cardType"
-                        id="cardType"
-                        data-testid="cardType"
-                        placeholder="Card Type"
-                        value={values.cardType}
-                        onChange={handleChange}
-                        onFocus={handleFocus}
-                        isValid={errors.type}
-                    />
-                </Form.Group>
-            </Col>
-            <Col>
-                <Form.Group>
+                <Form.Group style={{margin: '10px'}}>
                     <Form.Control
                         type="text"
                         id="cardExpiration"
@@ -82,7 +69,7 @@ const CreditCardPage = () => {
         </Row>
         <Row>
             <Col>
-                <Form.Group>
+                <Form.Group style={{margin: '10px'}}>
                     <Form.Control
                         type="number"
                         id="cardSecurityCode"
@@ -96,29 +83,17 @@ const CreditCardPage = () => {
                     />
                 </Form.Group>
             </Col>
-            <Col>
-                <Form.Group>
-                    <Form.Control
-                        type="text"
-                        id="cardPostalCode"
-                        data-testid="cardPostalCode"
-                        name="cardPostalCode"
-                        placeholder="Почтовый Код"
-                        value={values.cardPostalCode}
-                        onChange={handleChange}
-                        onFocus={handleFocus}
-                        isValid={errors.postal}
-                    />
-                </Form.Group>
-            </Col>
         </Row>
         <Button
             size={"block"}
             data-testid="validateButton"
             id="validateButton"
             type="submit"
+            onClick={() => {
+                alert("Благодарим что выбрали нас")
+                navigate("/")}}
         >
-                                Подтвердить
+                                Подтвердить заказ
         </Button>
     </Form>
           </div >

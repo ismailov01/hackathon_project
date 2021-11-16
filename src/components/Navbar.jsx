@@ -22,6 +22,7 @@ import SignUpModal from './auth/SignUpModal';
 import SignInModal from './auth/SignInModal';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
+import { useNavigate } from 'react-router';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -64,6 +65,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar() {
+    const navigate = useNavigate()
     const { user, logOut } = React.useContext(authContext)
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -71,7 +73,13 @@ export default function NavBar() {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    
+    let object = new URLSearchParams(window.location.search)
+    function filterProducts(key, value) {
+        object.set(key, value) 
+        let newUrl = `${window.location.pathname}?${object.toString()}`
+        navigate(newUrl)
+    }
+
     const [show, setShow] = React.useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -218,7 +226,10 @@ export default function NavBar() {
                         noWrap
                         component="div"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
-                    >
+                        onClick={() => {
+                            navigate("/")
+                        }}
+                   >
                         Makers food <LocationOnIcon/>
                     </Typography>
                     <Search>
@@ -226,6 +237,7 @@ export default function NavBar() {
                             <SearchIcon />
                         </SearchIconWrapper>
                         <StyledInputBase
+                        onChange={(e) => filterProducts("q",e.target.value) }
                             placeholder="Search…"
                             inputProps={{ 'aria-label': 'search' }}
                         />

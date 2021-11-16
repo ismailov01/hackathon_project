@@ -8,6 +8,7 @@ import AddPage from './pages/AddPage';
 import AdminPage from './pages/AdminPage';
 import EditPage from './pages/EditPage';
 import HomePage from './pages/HomePage';
+import CreditCardPage from './pages/CreditCard/CreditCardPage';
 
 const MyRoutes = () => {
     return (
@@ -20,6 +21,7 @@ const MyRoutes = () => {
                 <Route path="/admin" element = {<AdminPage/> }/>
                 <Route path="/add" element = {<AddPage/>} />
                 <Route path="/admin/edit/:id" element = {<EditPage />} />
+                <Route path="/credit/card" element = {<CreditCardPage/>} />
                 
             </Routes>
             {/* <Footer/> */}

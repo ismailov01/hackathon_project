@@ -49,7 +49,7 @@ export default function BasicTable() {
                       <p>{phone.composition.slice(0, 30)}...</p>
                     </Tooltip>
                   </TableCell>
-                  <TableCell align="right">{phone.price}</TableCell>
+                  <TableCell align="right">{phone.price} сом</TableCell>
                   <TableCell align="right">{phone.gram}</TableCell>
                   <TableCell align="right">
                     <Link to={`/admin/edit/${phone.id}`}>

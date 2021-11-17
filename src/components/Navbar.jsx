@@ -25,6 +25,7 @@ import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { clientContext } from '../contexts/ClientContext';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -261,7 +262,7 @@ export default function NavBar() {
                             color="inherit"
                         >
                             <Badge badgeContent={17} color="error">
-                                <NotificationsIcon />
+                                <FavoriteBorderIcon/>
                             </Badge>
                         </IconButton>
                         {profile}

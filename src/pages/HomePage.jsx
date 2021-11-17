@@ -8,7 +8,7 @@ import { useNavigate } from "react-router";
 import MediaCard from "../components/MediaCard";
 import { clientContext } from "../contexts/ClientContext";
 import Pagination from "../components/Pagination";
-// import MyCarousel from '../components/Carousel';
+import MyCarousel from '../components/Carousel/Carousel';
 
 const HomePage = () => {
   const { getProducts, products, currentPosts } = useContext(clientContext);
@@ -34,6 +34,7 @@ const HomePage = () => {
 
   return (
     <>
+    <MyCarousel/>
     <div className="home-page">
       <div className="sidebar" >
         <FormControl component="fieldset">

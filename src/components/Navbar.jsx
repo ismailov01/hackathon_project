@@ -20,7 +20,6 @@ import { authContext } from '../contexts/AuthContext';
 import { Button } from '@mui/material';
 import SignUpModal from './auth/SignUpModal';
 import SignInModal from './auth/SignInModal';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -219,17 +218,8 @@ export default function NavBar() {
     return (
         <>
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar style={{ backgroundColor: 'rgb(213, 65, 12)' }} position="static">
+            <AppBar className="navbar" position="static">
                 <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="open drawer"
-                        sx={{ mr: 2 }}
-                        >
-                        <MenuIcon />
-                    </IconButton>
                     <Typography
                         variant="h6"
                         noWrap
@@ -248,7 +238,7 @@ export default function NavBar() {
                         </SearchIconWrapper>
                         <StyledInputBase
                         onChange={(e) => filterProducts("q",e.target.value) }
-                        placeholder="Search…"
+                        placeholder="Поиск…"
                         inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
@@ -256,8 +246,8 @@ export default function NavBar() {
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <Link to="/cart">
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={productCountInCart} color="error">
-                                <ShoppingCart/>
+                            <Badge badgeContent={productCountInCart} color="primary">
+                                <ShoppingCart style={{ color: 'white'}}/>
                             </Badge>
                         </IconButton>
                         </Link>
@@ -266,7 +256,7 @@ export default function NavBar() {
                             aria-label="show 17 new notifications"
                             color="inherit"
                             >
-                            <Badge badgeContent={productsCountInFavorites} color="error">
+                            <Badge badgeContent={productsCountInFavorites} color="primary">
                                 <FavoriteIcon onClick={() => {
                                     handleOpen()
                                     getFavorite()

@@ -34,34 +34,34 @@ import { authContext } from "../../contexts/AuthContext";
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Sign In Account</Modal.Title>
+                    <Modal.Title>Войти в аккаунт</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleLogIn}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email</Form.Label>
+                            <Form.Label>Логин</Form.Label>
                             <Form.Control
                                 onChange={handleChange}
                                 name="email"
                                 type="email"
-                                placeholder="Enter user name"
+                                placeholder="Введите логин"
                             />
                             <Form.Text className="text-muted">
-                                We'll never share your user name with anyone else.
+                                Мы никогда никому не передадим ваше имя пользователя.
                             </Form.Text>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>Пароль</Form.Label>
                             <Form.Control
                                 onChange={handleChange}
                                 name="password"
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Пароль"
                             />
                         </Form.Group>
 
                         <Button variant="primary" type="submit">
-                            Submit
+                            Войти
                         </Button>
                     </Form>
                 </Modal.Body>

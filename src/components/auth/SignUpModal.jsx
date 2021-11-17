@@ -38,7 +38,7 @@ const SignUpModal = (props) => {
     <>
             <Modal show={props.show} onHide={props.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Create your account today</Modal.Title>
+                    <Modal.Title>Регистрация</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Formik
@@ -60,10 +60,10 @@ const SignUpModal = (props) => {
                                 onSubmit={handleSubmit}
                             >
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>Your username</Form.Label>
+                                    <Form.Label>Логин</Form.Label>
                                     <Form.Control
                                         type="text"
-                                        placeholder="Enter your username"
+                                        placeholder="Введите ваш логин"
                                         name="username"
                                         onChange={handleChange}
                                         isValid={!errors.username && touched.username}
@@ -75,10 +75,10 @@ const SignUpModal = (props) => {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>Email address</Form.Label>
+                                    <Form.Label>Адрес электронной почты</Form.Label>
                                     <Form.Control
                                         type="email"
-                                        placeholder="Enter email"
+                                        placeholder="Введите электронную почту "
                                         name="email"
                                         onChange={handleChange}
                                         isValid={!errors.email && touched.email}
@@ -90,10 +90,10 @@ const SignUpModal = (props) => {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Password</Form.Label>
+                                    <Form.Label>Пароль</Form.Label>
                                     <Form.Control
                                         type="password"
-                                        placeholder="Password"
+                                        placeholder="Введите пароль"
                                         name="password"
                                         onChange={handleChange}
                                         isValid={!errors.password && touched.password}
@@ -105,10 +105,10 @@ const SignUpModal = (props) => {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Repeat a password</Form.Label>
+                                    <Form.Label>Повторите пароль</Form.Label>
                                     <Form.Control
                                         type="password"
-                                        placeholder="Repeat a password"
+                                        placeholder="Введите повторный пароль"
                                         name="passwordConfirmation"
                                         onChange={handleChange}
                                         isValid={
@@ -124,7 +124,7 @@ const SignUpModal = (props) => {
                                 </Form.Group>
 
                                 <Button variant="primary" type="submit">
-                                    Submit
+                                    Зарегистрироваться
                                 </Button>
                             </Form>
                         )}

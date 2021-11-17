@@ -25,7 +25,8 @@ import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { clientContext } from '../contexts/ClientContext';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import Favorites from '../pages/Favorites';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -72,7 +73,7 @@ export default function NavBar() {
     const { user, logOut } = React.useContext(authContext)
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-    const {getProducts, productCountInCart} = React.useContext(clientContext)
+    const { getProducts, productCountInCart, productsCountInFavorites, getFavorite} = React.useContext(clientContext)
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -91,6 +92,9 @@ export default function NavBar() {
     const handleCloseLogin = () => setShowLogin(false);
     const handleShowLogin = () => setShowLogin(true);
 
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleCloseFavorite = () => setOpen(false);
 
 
     const handleProfileMenuOpen = (event) => {
@@ -213,6 +217,7 @@ export default function NavBar() {
 
 
     return (
+        <>
         <Box sx={{ flexGrow: 1 }}>
             <AppBar style={{ backgroundColor: 'rgb(213, 65, 12)' }} position="static">
                 <Toolbar>
@@ -222,7 +227,7 @@ export default function NavBar() {
                         color="inherit"
                         aria-label="open drawer"
                         sx={{ mr: 2 }}
-                    >
+                        >
                         <MenuIcon />
                     </IconButton>
                     <Typography
@@ -234,7 +239,7 @@ export default function NavBar() {
                             navigate("/")
                             getProducts()
                         }}
-                   >
+                        >
                         Makers food <LocationOnIcon/>
                     </Typography>
                     <Search>
@@ -243,8 +248,8 @@ export default function NavBar() {
                         </SearchIconWrapper>
                         <StyledInputBase
                         onChange={(e) => filterProducts("q",e.target.value) }
-                            placeholder="Search…"
-                            inputProps={{ 'aria-label': 'search' }}
+                        placeholder="Search…"
+                        inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
                     <Box sx={{ flexGrow: 1 }} />
@@ -260,9 +265,12 @@ export default function NavBar() {
                             size="large"
                             aria-label="show 17 new notifications"
                             color="inherit"
-                        >
-                            <Badge badgeContent={17} color="error">
-                                <FavoriteBorderIcon/>
+                            >
+                            <Badge badgeContent={productsCountInFavorites} color="error">
+                                <FavoriteIcon onClick={() => {
+                                    handleOpen()
+                                    getFavorite()
+                                }} />
                             </Badge>
                         </IconButton>
                         {profile}
@@ -276,7 +284,7 @@ export default function NavBar() {
                             aria-haspopup="true"
                             onClick={handleMobileMenuOpen}
                             color="inherit"
-                        >
+                            >
                             <MoreIcon />
                         </IconButton>
                     </Box>
@@ -287,5 +295,7 @@ export default function NavBar() {
             <SignUpModal handleClose={handleClose} show={show} />
             <SignInModal handleCloseLogin={handleCloseLogin} showLogin={showLogin} />
         </Box>
+        <Favorites open={open} handleCloseFavorite={handleCloseFavorite} handleOpen={handleOpen} />
+    </>
     );
 }

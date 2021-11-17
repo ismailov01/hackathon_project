@@ -9,20 +9,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.add-page, .edit-page{
+.add-page, .edit-page {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.add-page form, .edit-page form{
+
+.add-page form, .edit-page form {
   display: flex;
   flex-direction: column;
   width: 400px;
 }
-.add-page form input, .edit-page form input{
+
+.add-page form input, .edit-page form input {
   margin: 5px;
 }
+
 .add-page form button, .edit-page form button {
   margin-top: 15px;
 }
@@ -30,12 +33,14 @@ code {
 .home-page {
   display: grid;
   grid-template-columns: 200px 1fr;
-} 
+}
+
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.detail-image{
+
+.detail-image {
   display: flex;
   justify-content: center;
   height: 400px;
@@ -50,7 +55,8 @@ code {
   width: 90%;
   object-fit: contain;
 }
-.pagination{
+
+.pagination {
   display: flex;
   justify-content: center;
 }
@@ -58,4 +64,14 @@ code {
 .pagination ul {
   display: flex;
   list-style-type: none;
+}
+
+.css-1wnsr1i {
+  border: none !important;
+  border-radius: 10px;
+}
+
+.favorite {
+  display: flex;
+  align-items: center;
 }

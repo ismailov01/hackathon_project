@@ -7,12 +7,13 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { clientContext } from '../contexts/ClientContext';
 import DetailModal from './DetailModal';
 
 
 const MediaCard = (props) => {
-  const {addAndDeleteProductInCart, checkProductInCart} = useContext(clientContext)
+  const { addAndDeleteProductInCart, checkProductInCart, addAndDeleteProductInFavorites, checkFavoriteInFavorites} = useContext(clientContext)
   const [modalShow, setModalShow] = React.useState(false);
     console.log(props);
     return (
@@ -35,6 +36,9 @@ const MediaCard = (props) => {
       <CardActions>
         <Button size="small" onClick={() => addAndDeleteProductInCart(props.product)} >
             <ShoppingCartIcon color={checkProductInCart(props.product.id) ? 'error' : 'primary'} />
+        </Button>
+          <Button size="small" onClick={() => addAndDeleteProductInFavorites(props.product)}>
+            <FavoriteIcon color={checkFavoriteInFavorites(props.product.id) ? 'error' : 'primary'} />
         </Button>
         <Link to={`/product/${props.product.id}`}>
         <Button size="small"

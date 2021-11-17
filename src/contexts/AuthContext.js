@@ -1,97 +1,106 @@
-import React, { createContext, useContext, useEffect, useReducer } from 'react';
-import {auth} from "../firebase/FireBase"
+import React, { createContext, useContext, useEffect, useReducer } from "react";
+import { auth } from "../firebase/FireBase";
 import {
-    createUserWithEmailAndPassword, onAuthStateChanged,
-    signInWithEmailAndPassword, signOut } from 'firebase/auth'
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
 
-
-    
-export const authContext = createContext()
+export const authContext = createContext();
 const INIT_STATE = {
-    user: null,
-}
+  user: null,
+  email: null,
 
+};
 
 const reducer = (state = INIT_STATE, action) => {
-    switch (action.type) {
-        case "LOGIN_USER":
-            return {...state, user: action.payload};
-            case "LOGOUT_USER":
-                return {...state, user: action.payload};
-        default:
-            return state;
-    }
-}
-
+  switch (action.type) {
+    case "LOGIN_USER":
+      return { ...state, user: action.payload };
+    case "LOGOUT_USER":
+      return { ...state, user: action.payload };
+    case 'EMAIL':
+        return {...state, email: action.payload}
+    default:
+      return state;
+  }
+};
 
 const AuthContextProvider = (props) => {
-    const [state, dispatch] = useReducer(reducer, INIT_STATE)
+  const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
+  console.log(props);
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch({
+          type: "LOGIN_USER",
+          payload: user,
+        });
+      } else {
+        dispatch({
+          type: "LOGOUT_USER",
+          payload: null,
+        });
+      }
+    });
+  }, []);
 
-    useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            if(user) {
-                dispatch({
-                    type: "LOGIN_USER",
-                    payload: user,
-                });
-            }else {
-                dispatch({
-                    type: "LOGOUT_USER",
-                    payload: null,
-                })
-            }
-        })
-    },[])
-
-    const createUserWithEmailAndPasswordHandler = async (
+  const createUserWithEmailAndPasswordHandler = async (email, password) => {
+    try {
+      const { user } = await createUserWithEmailAndPassword(
+        auth,
         email,
         password
-    ) => {
-        try{
-            const {user} = await createUserWithEmailAndPassword(
-                auth,
-                email,
-                password
-            )
-        }catch(e) {
-            console.log(e);
-        }
+      );
+    } catch (e) {
+      console.log(e);
     }
+  };
 
-    const logOut = async () => {
-        signOut(auth)
-        .then(() => {
+  const logOut = async () => {
+    signOut(auth)
+      .then(() => {
+        dispatch({
+          type: "LOGOUT_USER",
+          payload: null,
+        });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+  let adminEmail = 'kubaismailov02@gmail.com';
+
+  const loginUserWithEmail = async (email, password) => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+        if(email === adminEmail){
             dispatch({
-                type: "LOGOUT_USER",
-                payload: null
+                type: 'EMAIL',
+                payload: email,
             })
-        })
-        .catch((e) => {
-            console.log(e);
-        })
-    }
-
-    const loginUserWithEmail = async (email, password) => {
-        try{
-            await signInWithEmailAndPassword(auth, email, password)
-        }catch (e) {
-            console.log(e);
         }
+    } catch (e) {
+      console.log(e);
     }
+  };
 
-    return (
-        <authContext.Provider
-        value={{
-            createUserWithEmailAndPasswordHandler,
-            loginUserWithEmail,
-            logOut,
-            user: state.user,
-        }}
-        >
-            {props.children}
-        </authContext.Provider>
-    );
+  return (
+    <authContext.Provider
+      value={{
+        createUserWithEmailAndPasswordHandler,
+        loginUserWithEmail,
+        logOut,
+        user: state.user,
+        email: state.email,
+        adminEmail
+      }}
+    >
+      {props.children}
+    </authContext.Provider>
+  );
 };
 
 export default AuthContextProvider;

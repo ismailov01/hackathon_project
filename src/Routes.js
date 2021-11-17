@@ -12,6 +12,7 @@ import CreditCardPage from './pages/CreditCard/CreditCardPage';
 import ClientContextProvider from './contexts/ClientContext';
 import DetailPage from './pages/DetailPage';
 import CartPage from './pages/CartPage';
+import Favorites from './pages/Favorites';
 
 
 const MyRoutes = () => {
@@ -29,6 +30,7 @@ const MyRoutes = () => {
                 <Route path="/credit/card" element = {<CreditCardPage/>} />
                 <Route path="/product/:id" element = {<DetailPage />} />
                 <Route path="/cart" element = {<CartPage />} />
+
             </Routes>
             {/* <Footer/> */}
         </BrowserRouter>

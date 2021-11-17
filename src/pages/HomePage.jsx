@@ -38,7 +38,7 @@ const HomePage = () => {
     <div className="home-page">
       <div className="sidebar" >
         <FormControl component="fieldset">
-          <FormLabel component="legend">Категория</FormLabel>
+          <FormLabel style={{color: "white", textAlign:"center", marginTop: "10px"}} component="legend">Категория</FormLabel>
           <RadioGroup
             aria-label="gender"
             value={brandValue}

@@ -236,24 +236,14 @@ export default function NavBar() {
       </Link>
     );
   }
-
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
-          style={{ backgroundColor: "rgb(213, 65, 12)" }}
+          className="navbar"
           position="static"
         >
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
             <Typography
               variant="h6"
               noWrap
@@ -272,7 +262,7 @@ export default function NavBar() {
               </SearchIconWrapper>
               <StyledInputBase
                 onChange={(e) => filterProducts("q", e.target.value)}
-                placeholder="Search…"
+                placeholder="Поиск…"
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>
@@ -285,8 +275,8 @@ export default function NavBar() {
                   aria-label="show 4 new mails"
                   color="inherit"
                 >
-                  <Badge badgeContent={productCountInCart} color="error">
-                    <ShoppingCart />
+                  <Badge badgeContent={productCountInCart} color="primary">
+                    <ShoppingCart style={{ color: 'white'}}/>
                   </Badge>
                 </IconButton>
               </Link>
@@ -295,7 +285,7 @@ export default function NavBar() {
                 aria-label="show 17 new notifications"
                 color="inherit"
               >
-                <Badge badgeContent={productsCountInFavorites} color="error">
+                <Badge badgeContent={productsCountInFavorites} color="primary">
                   <FavoriteIcon
                     onClick={() => {
                       handleOpen();

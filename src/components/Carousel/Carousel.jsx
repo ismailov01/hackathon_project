@@ -27,7 +27,9 @@ const MyCarousel = () => {
                         alt="Third slide"
                     />
                 </Carousel.Item>
-            
+             
+
+
             </Carousel>
         </div>
     );

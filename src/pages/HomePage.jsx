@@ -35,21 +35,21 @@ const HomePage = () => {
   return (
     <>
     <MyCarousel/>
-    <div className="home-page">
+      <div className="home-page">
       <div className="sidebar" >
         <FormControl component="fieldset">
-          <FormLabel style={{color: "white", textAlign:"center", marginTop: "10px"}} component="legend">Категория</FormLabel>
+            <FormLabel style={{ color: "white", textAlign: "center", marginTop: "10px", fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "30px", fontWeight: "bold"}} component="legend">Категория</FormLabel>
           <RadioGroup
             aria-label="gender"
             value={brandValue}
             name="radio-buttons-group"
             onChange={(e) => filterProducts("category", e.target.value)}
           >
-                          <FormControlLabel
-
+              <FormControlLabel 
                               value="Завтраки"
-                              control={<Radio />}
-                              label="Завтраки"
+                control={<Radio />}
+                              label="Завтраки" 
+                style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "30px" }}
                           /> <img width='100px' src=""  />
                           <FormControlLabel
                               value="Супы"

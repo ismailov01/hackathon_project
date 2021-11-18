@@ -18,26 +18,26 @@ const Pagination = () => {
   }
   
 
-  return (
-    <div className="pagination">
-      <ul>
-        {pageNumbers.map((page) => (
-          <li key={page}>
-            <Button
-              style={{
-                background: page === currentPage ? "blue" : "darkblue",
-                margin: "5px",
-              }}
-              variant="contained"
-              onClick={() => handlePage(page)}
-            >
-              {page}
-            </Button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+
+// asdasd
+    return (
+        <div className="pagination">
+            <ul>
+                {
+                    pageNumbers.map((page) => (
+                        <li  key={page}>
+                            <Button 
+                                style={{ background: page === currentPage ? '#FA2A3A' : 'blue', margin: '5px'}}
+                            variant="contained" 
+                            onClick={() => handlePage(page)}
+                            
+                            >{page}</Button>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    );
 };
 
 export default Pagination;

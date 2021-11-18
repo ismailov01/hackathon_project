@@ -20,7 +20,7 @@ const CartPage = () => {
 
   return (
     <div>
-      <h2 style={{color: 'red', display: 'flex', justifyContent: 'center'}}>Корзина</h2>
+      <h2 style={{color: 'white', display: 'flex', justifyContent: 'center'}}>Корзина</h2>
       <div>
         {cart ? (
           cart.products.length > 0 ? (

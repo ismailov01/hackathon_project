@@ -1,6 +1,7 @@
 * {
-  font-family: 'Lora',serif;
+  font-family: 'Lora', serif;
 }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -81,11 +82,7 @@ code {
 }
 
 body {
-  background: rgb(214, 30, 30);
-  background: radial-gradient(circle, rgba(214, 30, 30, 0.92) 15%, rgba(18, 39, 93, 1) 76%);
-}
-
-.navbar {
-  background: rgb(214, 30, 30);
-  background: radial-gradient(circle, rgba(214, 30, 30, 0.92) 15%, rgba(18, 39, 93, 1) 76%);
+  /* background: #FA2A3A;
+  background: radial-gradient(circle, #FA2A3A 15%, #FA2A3A 76%); */
+  background: url5("https://st4.depositphotos.com/1558912/20620/i/600/depositphotos_206202686-stock-photo-food-cooking-background-on-black.jpg");
 }

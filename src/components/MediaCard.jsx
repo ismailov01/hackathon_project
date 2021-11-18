@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,14 +10,25 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { clientContext } from '../contexts/ClientContext';
 import DetailModal from './DetailModal';
+import ReactCardFlip from 'react-card-flip';
 
 
 const MediaCard = (props) => {
-  const { addAndDeleteProductInCart, checkProductInCart, addAndDeleteProductInFavorites, checkFavoriteInFavorites} = useContext(clientContext)
+  const { addAndDeleteProductInCart, checkProductInCart, addAndDeleteProductInFavorites, checkFavoriteInFavorites, getProducts} = useContext(clientContext)
   const [modalShow, setModalShow] = React.useState(false);
     console.log(props);
+
+    // const [isFlipped, setIsFlipped] = useState(false)
+    // const handleClick = (() => {
+    //   setIsFlipped(!isFlipped)
+    // })
+
+    // useEffect(() => {
+    //   getProducts()
+    // },[])
     return (
-        <Card sx={{ maxWidth: 300, margin: '10px'}}>
+      // <ReactCardFlip isFlipped={isFlipped}>
+        <Card sx={{ maxWidth: 300, margin: '10px'}} >
       <CardMedia
         component="img"
         height="140"
@@ -44,12 +55,13 @@ const MediaCard = (props) => {
         <Button size="small"
         variant="contained">Подробнее</Button>
         </Link>
-        {/* <DetailModal
+        <DetailModal
         show={modalShow}
         onHide={() => setModalShow(false)}
-      /> */}
+      />
       </CardActions>
     </Card>
+      // </ReactCardFlip>
     );
 };
 

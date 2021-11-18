@@ -28,6 +28,7 @@ import { clientContext } from "../contexts/ClientContext";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Favorites from "../pages/Favorites";
 
+
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -218,10 +219,10 @@ export default function NavBar() {
   } else {
     profile = (
       <>
-        <Button color="inherit" variant="text" onClick={handleShowLogin}>
+        <Button color="inherit" onClick={handleShowLogin} style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "16px"}}>
           Sign In
         </Button>
-        <Button color="inherit" variant="text" onClick={handleShow}>
+        <Button color="inherit" onClick={handleShow} style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "16px" }}>
           Sign Up
         </Button>
       </>
@@ -240,7 +241,7 @@ export default function NavBar() {
     <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
-          className="navbar"
+          style={{ background: "#FA2A3A"}}
           position="static"
         >
           <Toolbar>
@@ -253,6 +254,7 @@ export default function NavBar() {
                 navigate("/");
                 getProducts();
               }}
+              style={{ cursor: 'pointer', fontSize: "30px", fontFamily: "Francois One, sans-serif", letterSpacing: "1px"}}
             >
               Makers food <LocationOnIcon />
             </Typography>
@@ -263,6 +265,7 @@ export default function NavBar() {
               <StyledInputBase
                 onChange={(e) => filterProducts("q", e.target.value)}
                 placeholder="Поиск…"
+                style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px"}}
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>

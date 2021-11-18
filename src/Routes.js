@@ -32,7 +32,7 @@ const MyRoutes = () => {
                 <Route path="/cart" element = {<CartPage />} />
 
             </Routes>
-            {/* <Footer/> */}
+            <Footer/>
         </BrowserRouter>
         </AdminContextProvider>
         </ClientContextProvider>

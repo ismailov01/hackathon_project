@@ -267,7 +267,43 @@ export default function NavBar() {
       </MenuItem>
     </Menu>
   );
+  let profile;
+  if (user) {
+    profile = (
+      <IconButton
+        size="large"
+        edge="end"
+        aria-label="account of current user"
+        aria-controls={menuId}
+        aria-haspopup="true"
+        onClick={handleProfileMenuOpen}
+        color="inherit"
+      >
+        <AccountCircle />
+      </IconButton>
+    );
+  } else {
+    profile = (
+      <>
+        <Button color="inherit" onClick={handleShowLogin} style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "16px", fontWeight: "bold"}}>
+          Войти
+        </Button>
+        <Button color="inherit" onClick={handleShow} style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "16px", fontWeight: "bold" }}>
+          Регистрация
+        </Button>
+      </>
+    );
+  }
 
+  let temp;
+  if (user.email === adminEmail) {
+    temp = (
+      <Link to="/admin">
+        <Button variant="contained">Admin</Button>
+      </Link>
+    );
+  }
+  console.log(user);
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>

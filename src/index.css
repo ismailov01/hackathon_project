@@ -85,3 +85,20 @@ code {
   display: flex;
   align-items: center;
 }
+.image {
+  width: 300px;
+}
+
+.modall {
+  display: flex;
+  justify-content: center;
+}
+
+.mainModal {
+  font-size: 17px;
+}
+
+.modal-content {
+  background: linear-gradient(to right, rgba(138, 138, 138, 0.522) 0%, rgba(110, 113, 114, 0.549) 36%, rgba(69, 74, 77, 0.878) 100%);
+  font-weight: 650;
+}

@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 
 const CartPage = () => {
-  const { getCart, cart, changeCountProduct } = useContext(clientContext);
+  const { getCart, cart, changeCountProduct, addAndDeleteProductInCart } = useContext(clientContext);
   useEffect(() => {
     getCart();
   }, []);
@@ -34,6 +34,7 @@ const CartPage = () => {
                     <TableCell align="right">Изображение</TableCell>
                     <TableCell align="right">Количество</TableCell>
                     <TableCell align="right">Сумма</TableCell>
+                    <TableCell align="right">#</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -61,6 +62,11 @@ const CartPage = () => {
                           />
                       </TableCell>
                       <TableCell align="right">{item.subPrice} сом</TableCell>
+                      <TableCell align="right"><Button variant="contained" color="warning" onClick={() => {
+                        addAndDeleteProductInCart(item)
+                        getCart()
+                        }}>Удалить</Button> </TableCell>
+
                     </TableRow>
                   ))}
                   <TableRow>
@@ -79,7 +85,7 @@ const CartPage = () => {
             </Link>
         </>
           ) : (
-            <h2>Корзина пуста</h2>
+            <h2 style={{color: 'white', display: 'flex', justifyContent: 'center'}}>Корзина пуста</h2>
           )
         ) : (
           <h2>Loading...</h2>

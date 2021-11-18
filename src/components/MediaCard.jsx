@@ -36,7 +36,6 @@ const MediaCard = (props) => {
         style={{objectFit: 'contain'}}
         image={props.product.image}
         alt="product"
-        className='cartochka'
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

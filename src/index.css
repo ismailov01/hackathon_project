@@ -82,7 +82,24 @@ code {
 }
 
 body {
-  /* background: #FA2A3A;
-  background: radial-gradient(circle, #FA2A3A 15%, #FA2A3A 76%); */
-  background: url5("https://st4.depositphotos.com/1558912/20620/i/600/depositphotos_206202686-stock-photo-food-cooking-background-on-black.jpg");
+  background: url("https://st4.depositphotos.com/1558912/20620/i/600/depositphotos_206202686-stock-photo-food-cooking-background-on-black.jpg");
 }
+
+.image {
+  width: 300px;
+}
+
+.modall {
+  display: flex;
+  justify-content: center;
+}
+
+.mainModal {
+  font-size: 17px;
+}
+
+.modal-content {
+  background: linear-gradient(to right, rgba(138, 138, 138, 0.522) 0%, rgba(110, 113, 114, 0.549) 36%, rgba(69, 74, 77, 0.878) 100%);
+  font-weight: 650;
+}
+

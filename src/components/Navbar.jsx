@@ -219,11 +219,11 @@ export default function NavBar() {
   } else {
     profile = (
       <>
-        <Button color="inherit" onClick={handleShowLogin} style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "16px"}}>
-          Sign In
+        <Button color="inherit" onClick={handleShowLogin} style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "16px", fontWeight: "bold"}}>
+          Войти
         </Button>
-        <Button color="inherit" onClick={handleShow} style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "16px" }}>
-          Sign Up
+        <Button color="inherit" onClick={handleShow} style={{ fontFamily: "Francois One, sans-serif", letterSpacing: "1px", fontSize: "16px", fontWeight: "bold" }}>
+          Регистрация
         </Button>
       </>
     );

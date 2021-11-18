@@ -28,20 +28,22 @@ const MediaCard = (props) => {
     // },[])
     return (
       // <ReactCardFlip isFlipped={isFlipped}>
-        <Card sx={{ maxWidth: 300, margin: '10px'}} >
+        <Card sx={{ maxWidth: 300, margin: '10px'}} 
+        className='cartochka'>
       <CardMedia
         component="img"
         height="140"
         style={{objectFit: 'contain'}}
         image={props.product.image}
         alt="product"
+        className='cartochka'
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {props.product.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.product.composition}
+        <Typography variant="body2" color="text.secondary" style={{ fontSize: "20px"}}>
+          {props.product.price} сом
         </Typography>
       </CardContent>
       <CardActions>
@@ -51,13 +53,14 @@ const MediaCard = (props) => {
           <Button size="small" onClick={() => addAndDeleteProductInFavorites(props.product)}>
             <FavoriteIcon color={checkFavoriteInFavorites(props.product.id) ? 'error' : 'primary'} />
         </Button>
-        <Link to={`/product/${props.product.id}`}>
+        {/* <Link to={`/product/${props.product.id}`}> */}
         <Button size="small"
-        variant="contained">Подробнее</Button>
-        </Link>
+        variant="contained" onClick={()=> setModalShow(true)}>Подробнее</Button>
+        {/* </Link> */}
         <DetailModal
         show={modalShow}
         onHide={() => setModalShow(false)}
+        products = {props.product}
       />
       </CardActions>
     </Card>

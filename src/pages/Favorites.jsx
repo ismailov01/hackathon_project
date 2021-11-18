@@ -11,10 +11,8 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
+    width: 500,
+    bgcolor: 'white',
     p: 4,
 };
 const Favorites = ({ open, handleCloseFavorite }) => {
@@ -38,7 +36,7 @@ const Favorites = ({ open, handleCloseFavorite }) => {
                                     favorites.favorites.map((item) => (
 
                                         <div key={item.item.id} className="favorite" >
-                                            <img width='100px' src={item.item.image} />
+                                            <img width='220px' src={item.item.image} />
                                             <span >{item.item.name}</span>
 
                                             <Button onClick={() => {
@@ -50,7 +48,7 @@ const Favorites = ({ open, handleCloseFavorite }) => {
                                             >X</Button>
                                             <Button
                                                 onClick={() => addAndDeleteProductInCart(item.item)}
-                                                className='shop-btn' color={checkProductInCart(item.item.id) ? 'error' : 'success'} variant='outlined' size="large">
+                                                className='shop-btn' color={checkProductInCart(item.item.id) ? 'error' : ''} variant='outlined' size="large">
                                                 <ShoppingCartIcon color={checkProductInCart(item.item.id) ? 'error' : ''} />
                                             </Button>
                                             <br />

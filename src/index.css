@@ -7,7 +7,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("https://st4.depositphotos.com/1558912/20620/i/600/depositphotos_206202686-stock-photo-food-cooking-background-on-black.jpg");
+  background: url("https://st4.depositphotos.com/1558912/20620/i/600/depositphotos_206202686-stock-photo-food-cooking-background-on-black.jpg");  
 }
 
 code {
@@ -80,4 +80,21 @@ code {
 .favorite {
   display: flex;
   align-items: center;
+}
+.image {
+  width: 300px;
+}
+
+.modall {
+  display: flex;
+  justify-content: center;
+}
+
+.mainModal {
+  font-size: 17px;
+}
+
+.modal-content {
+  background: linear-gradient(to right, rgba(138, 138, 138, 0.522) 0%, rgba(110, 113, 114, 0.549) 36%, rgba(69, 74, 77, 0.878) 100%);
+  font-weight: 650;
 }

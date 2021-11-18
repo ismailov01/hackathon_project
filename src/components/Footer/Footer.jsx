@@ -53,8 +53,8 @@ const Footer = () => {
                             }}
                         >
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
+                                <Form.Label>Адрес электронной почты</Form.Label>
+                                <Form.Control type="email" placeholder="Введите электронную почту" />
                                 <Form.Text className="text-muted">
                                     Мы никогда никому не передадим вашу электронную почту
                                 </Form.Text>

@@ -7,7 +7,7 @@ const DetailModal = (props) => {
     const {getDetails, productDetails} = useContext(clientContext)
     const params = useParams()
 
-    console.log(getDetails());
+    // console.log(getDetails());
     return (
     <>
         <Modal

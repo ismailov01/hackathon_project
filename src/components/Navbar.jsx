@@ -71,7 +71,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function NavBar() {
   const navigate = useNavigate();
-  const { user, logOut, email, adminEmail } = React.useContext(authContext);
+  const { user, logOut, adminEmail } = React.useContext(authContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const {
@@ -118,93 +118,9 @@ export default function NavBar() {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
-
   const menuId = "primary-search-account-menu";
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>
-      {
-        user && (<p style={{ fontSize: "15px" }}>{user.email}</p>)
-      }
-      </MenuItem>
-      <MenuItem
-        onClick={() => {
-          handleMenuClose();
-          logOut();
-          getProducts();
-        }}
-      >
-        Log Out
-      </MenuItem>
-    </Menu>
-  );
 
-  const mobileMenuId = "primary-search-account-menu-mobile";
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
-
+  
   let profile;
   if (user) {
     profile = (
@@ -241,7 +157,117 @@ export default function NavBar() {
       </Link>
     );
   }
-  console.log(user);
+
+  
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+
+      {
+        user ? (
+      <>
+      <MenuItem onClick={handleMenuClose}>
+      {
+        user && (<p style={{ fontSize: "15px" }}>{user.email}</p>)
+      }
+      </MenuItem>
+      <MenuItem
+      onClick={() => {
+        handleMenuClose();
+        logOut();
+        getProducts();
+      }}
+      >
+      Log Out
+    </MenuItem>
+    </>
+        ) : (
+      <MenuItem> 
+      {profile}
+      </MenuItem> 
+        ) 
+      }
+
+
+    </Menu>
+  );
+
+  const mobileMenuId = "primary-search-account-menu-mobile";
+  const renderMobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      id={mobileMenuId}
+      keepMounted
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose}
+    >
+      <MenuItem>
+      <Link to="/cart">
+                <IconButton
+                  size="large"
+                  aria-label="show 4 new mails"
+                  color="inherit"
+                >
+                  <Badge badgeContent={productCountInCart} color="primary">
+                    <ShoppingCart style={{ color: 'black'}}/>
+                  </Badge>
+                </IconButton>
+              </Link>
+        <p>Корзина</p>
+      </MenuItem>
+      <MenuItem>
+      <IconButton
+                size="large"
+                aria-label="show 17 new notifications"
+                color="inherit"
+              >
+                <Badge badgeContent={productsCountInFavorites} color="primary">
+                  <FavoriteIcon
+                    onClick={() => {
+                      handleOpen();
+                      getFavorite();
+                    }}
+                  />
+                </Badge>
+              </IconButton>
+        <p>Избранное</p>
+      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle />
+        </IconButton>
+        <p>Profile</p>
+      </MenuItem>
+    </Menu>
+  );
+
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>

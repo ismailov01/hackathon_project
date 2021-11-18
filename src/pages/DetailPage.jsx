@@ -8,11 +8,11 @@ const DetailPage = () => {
     const {getDetails, productDetails} = useContext(clientContext)
     const params = useParams()
     useEffect(() => {
-        getDetails(params.id)
+      getDetails(params.id)
     }, [])
-    console.log(productDetails);
+    
     return (
-        <div>
+        <div style={{color: 'white'}}>
             {productDetails ? (
         <div className="detail-page">
           <div className="detail-image">

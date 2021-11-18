@@ -41,7 +41,7 @@ const Footer = () => {
                             <img style={{ width: 35, height: 35 }} src={instagram} />
                         </a> 
                     </div>
-                    <div className="col-3">
+                    <div className="col-3 right-side">
                         <h5>Подписка на новости</h5>
                         <span className="fourth">
                             Получите доступ к эксклюзивным скидкам

@@ -58,10 +58,10 @@ const Favorites = ({ open, handleCloseFavorite }) => {
 
                                     ))
                                 ) : (
-                                    <h3>У вас нет избранных товаров </h3>
+                                    <h3>Загрузка</h3>
                                 )
                             ) : (
-                                <h3>Loading...</h3>
+                                <h3>У вас нет избранных товаров </h3>
                             )
                         }
                     </Typography>

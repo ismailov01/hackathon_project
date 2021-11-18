@@ -9,8 +9,7 @@ import {
 
 export const authContext = createContext();
 const INIT_STATE = {
-  user: null,
-  email: null,
+  user: '',
 
 };
 
@@ -20,8 +19,6 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, user: action.payload };
     case "LOGOUT_USER":
       return { ...state, user: action.payload };
-    case 'EMAIL':
-        return {...state, email: action.payload}
     default:
       return state;
   }
@@ -41,7 +38,7 @@ const AuthContextProvider = (props) => {
       } else {
         dispatch({
           type: "LOGOUT_USER",
-          payload: null,
+          payload: '',
         });
       }
     });
@@ -64,7 +61,7 @@ const AuthContextProvider = (props) => {
       .then(() => {
         dispatch({
           type: "LOGOUT_USER",
-          payload: null,
+          payload: '',
         });
       })
       .catch((e) => {
@@ -75,13 +72,7 @@ const AuthContextProvider = (props) => {
 
   const loginUserWithEmail = async (email, password) => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-        if(email === adminEmail){
-            dispatch({
-                type: 'EMAIL',
-                payload: email,
-            })
-        }
+      await signInWithEmailAndPassword(auth, email, password)
     } catch (e) {
       console.log(e);
     }
@@ -94,7 +85,6 @@ const AuthContextProvider = (props) => {
         loginUserWithEmail,
         logOut,
         user: state.user,
-        email: state.email,
         adminEmail
       }}
     >

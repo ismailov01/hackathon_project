@@ -135,7 +135,11 @@ export default function NavBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>{<p style={{ fontSize: "15px" }}>{email}</p>}</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+      {
+        user && (<p style={{ fontSize: "15px" }}>{user.email}</p>)
+      }
+      </MenuItem>
       <MenuItem
         onClick={() => {
           handleMenuClose();
@@ -229,13 +233,14 @@ export default function NavBar() {
   }
 
   let temp;
-  if (email === adminEmail) {
+  if (user.email === adminEmail) {
     temp = (
       <Link to="/admin">
         <Button variant="contained">Admin</Button>
       </Link>
     );
   }
+  console.log(user);
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -248,6 +253,7 @@ export default function NavBar() {
               variant="h6"
               noWrap
               component="div"
+              style={{cursor: 'pointer'}}
               sx={{ display: { xs: "none", sm: "block" } }}
               onClick={() => {
                 navigate("/");
@@ -266,7 +272,7 @@ export default function NavBar() {
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>
-            {user ? temp : <></>}
+            {user.email === adminEmail ? temp : <></>}
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <Link to="/cart">

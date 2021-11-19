@@ -1,0 +1,975 @@
+{
+  "products": [
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/q3mft4lj8frklbqkd1q8",
+      "name": "Пепперони 22",
+      "category": "Пицца",
+      "composition": "Пицца Пепперони. Пицца-соус, сыр моцарелла, салями, шампиньоны.",
+      "price": 350,
+      "gram": "30см, 570 гр",
+      "id": 1
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/9d51c6a71e514923a655579ff838ac1c_292x292.jpeg ",
+      "name": "Сырная",
+      "category": "Пицца",
+      "composition": "Увеличенная порция моцареллы, сыры чеддер и пармезан, соус альфредо",
+      "price": 380,
+      "gram": "30 см, 540 гр",
+      "id": 2
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/627623c8-98da-4bae-aeab-6a9b2f0d838b.jpg ",
+      "name": "Маргарита",
+      "category": "Пицца",
+      "composition": "Пицца-соус, сыр моцарелла, орегано, помидоры, базилик.",
+      "price": 280,
+      "gram": "30 см, 470гр",
+      "id": 3
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/e4bfffcc-730a-4fb3-9006-22c4d6269543.jpg",
+      "name": "Мексиканская",
+      "category": "Пицца",
+      "composition": "Мега сытная пицца с ароматным, пряным, мясным рагу Чили кон карне и сливочным соусом Крема де сальса.",
+      "price": 420,
+      "gram": "30 см, 540гр",
+      "id": 4
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/0d7a49985ddd45b3aaaf28c903d9b9cb_292x292.jpeg",
+      "name": "Мясная",
+      "category": "Пицца",
+      "composition": "Цыпленок, ветчина из цыпленка, пепперони из цыпленка, томатный соус, чоризо из цыпленка, моцарелла",
+      "price": 490,
+      "gram": "30 см, 600гр",
+      "id": 5
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/2c0be83172ad44429d1cf7aef8b3dcd1_292x292.jpeg",
+      "name": "4 сыра",
+      "category": "Пицца",
+      "composition": "Пицца-соус, сыры: моцарелла, эмменталь, дорблю, пармезан.",
+      "price": 410,
+      "gram": "30 см, 560гр",
+      "id": 6
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/1ee83fd7a0444e7c90bf593fdea61801_292x292.jpeg",
+      "name": "Азиатская",
+      "category": "Пицца",
+      "composition": "Моцарелла, сладкий перец, томаты, красный лук, фарш из говядины, сушеный перец чили, томатный соус",
+      "price": 450,
+      "gram": "30 см, 500гр",
+      "id": 7
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/4f760d108a3f47fea43520d234157ac2_292x292.jpeg",
+      "name": "Чили",
+      "category": "Пицца",
+      "composition": "Говяжий фарш, острые перчики, болгарский перец, томаты, специи, сыр моцарелла.",
+      "price": 440,
+      "gram": "30 см, 670гр",
+      "id": 8
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/3153a67746be42c8aca720ddecfb0b22_292x292.jpeg",
+      "name": "Деревенская",
+      "category": "Пицца",
+      "composition": "Пицца-соус, сыр моцарелла, маринованная говядина, копчёная утиная грудка, шампиньоны, чеснок, лук, зелень.",
+      "price": 490,
+      "gram": "30 см, 670гр",
+      "id": 9
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/ecbccdfb36654d43af86e59f978e4cf0_292x292.jpeg",
+      "name": "Ветчина и сыр",
+      "category": "Пицца",
+      "composition": "Ветчина из цыпленка, моцарелла, соус альфредо",
+      "price": 399,
+      "gram": "30 см, 480гр",
+      "id": 10
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/d66be5a1e65b4bcf9faef8e1247ed54a_292x292.jpeg",
+      "name": "Карбонара",
+      "category": "Пицца",
+      "composition": "Ветчина из цыпленка, сыры чеддер и пармезан, моцарелла, красный лук, чеснок, соус альфредо, итальянские травы, томаты",
+      "price": 510,
+      "gram": "30 см, 680гр",
+      "id": 11
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/b32b38d7128d463aab1ce05edfa6e8b6_292x292.png",
+      "name": "Гавайская",
+      "category": "Пицца",
+      "composition": "Ветчина, ананасы, моцарелла, томатный соус",
+      "price": 490,
+      "gram": "30 см, 540 г",
+      "id": 12
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/1453914e11424062b09885ccddc9a517_292x292.jpeg",
+      "name": "Из двух половинок ",
+      "category": "Пицца",
+      "composition": "На ваш выбор",
+      "price": 520,
+      "gram": "30 см, 670гр",
+      "id": 13
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/5b3a9196-a7bb-4baa-9a8a-cf940fcacd2b.jpg",
+      "name": "4 сезона",
+      "category": "Пицца",
+      "composition": "На ваш выбор",
+      "price": 595,
+      "gram": "30 см, 670гр",
+      "id": 14
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/cvtjzkbwlmhmnqwhejof",
+      "name": "Каппа маки",
+      "category": "Суши",
+      "composition": "Нори, рис, огурец, кунжут - по желанию",
+      "price": 150,
+      "gram": "8 шт",
+      "id": 15
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/oxhazazjppygdlsduadi",
+      "name": "Куриный",
+      "category": "Суши",
+      "composition": "Куриная грудка, помидор, майонез, кунжут",
+      "price": 170,
+      "gram": "8 шт",
+      "id": 16
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/mbjp9xxzribbhvr3ehlz",
+      "name": "Темпура маки",
+      "category": "Суши",
+      "composition": "Сёмга, сыр филадельфия, кляр, панировка, рис, нори",
+      "price": 280,
+      "gram": "8 шт",
+      "id": 17
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/s0ks61ukrzxnghpxhwjj",
+      "name": "Унаги маки",
+      "category": "Суши",
+      "composition": "Нори, рис, огурец, копченный угорь",
+      "price": 250,
+      "gram": "8 шт",
+      "id": 18
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/h2xgdrc8zdkc5nydy9ky",
+      "name": "Сырный с лососем",
+      "category": "Суши",
+      "composition": "Лосось, крем сыр, сыр тостерный, салат Айсберг",
+      "price": 270,
+      "gram": "8 шт",
+      "id": 19
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/ay97raeyjakgic1aywwa",
+      "name": "Филадельфия",
+      "category": "Суши",
+      "composition": "Лосось, сыр Филадельфия, томаго, огурец",
+      "price": 245,
+      "gram": "8 шт",
+      "id": 20
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/dudkagmjmfozkjxdcchx",
+      "name": "Калифорния",
+      "category": "Суши",
+      "composition": "Крабовые палочки, тобико, майонез, огурец, омлет",
+      "price": 245,
+      "gram": "8 шт",
+      "id": 21
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/ihfhbke7jknudp3cancy ",
+      "name": "Флорида",
+      "category": "Суши",
+      "composition": "Рис, лосось, крабовые палочки, огурец, кляр, васаби, водоросли Нори, панировка, масло, сыр, имбирь, соус.",
+      "price": 300,
+      "gram": "8 шт",
+      "id": 22
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/i6mlq96mbvbt5j90834o",
+      "name": "Овощной",
+      "category": "Суши",
+      "composition": "Огурец, помидоры, болгарский перец, лист салата, майонез",
+      "price": 150,
+      "gram": "8 шт",
+      "id": 23
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/afku0qykqnzfj1pucw0m",
+      "name": "Сэндвич ролл",
+      "category": "Роллы",
+      "composition": "Оригинальный ролл с лососем, сыром Филадельфия, икрой летучей рыбы, огурцом и зеленым луком",
+      "price": 250,
+      "gram": "8 шт",
+      "id": 24
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/odxpuf5xgvvlhtnkoreo ",
+      "name": "Чикаго",
+      "category": "Роллы",
+      "composition": "Куриная грудка, соус Терияки, огурец, зеленый лук, томаго",
+      "price": 260,
+      "gram": "8 шт",
+      "id": 25
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/rp5rl55gb3jhtmypcuyl",
+      "name": "Токио",
+      "category": "Роллы",
+      "composition": "рис, масаго, зелень, сливочный сыр, мидии, сырный соус, угорь",
+      "price": 300,
+      "gram": "8 шт",
+      "id": 26
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/mh0srx4fivko3tcxi0mm",
+      "name": "Блинчики ролл",
+      "category": "Роллы",
+      "composition": "Блины готовые, лосось, сливочный сыр, авокадо, лимоны, перец чили ",
+      "price": 200,
+      "gram": "8 шт",
+      "id": 27
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/em1nm5x2pyyzfnnli8jp",
+      "name": "Комбо для себя",
+      "category": "Комбо",
+      "composition": "На ваш выбор",
+      "price": 360,
+      "gram": "30 см, 8шт",
+      "id": 28
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/bxqaflaezvoborfsdiu1",
+      "name": "Комбо Ассорти",
+      "category": "Комбо",
+      "composition": "На ваш выбор",
+      "price": 890,
+      "gram": "30 см, 24шт",
+      "id": 29
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/irkqowsj6vr0qsoyiurc ",
+      "name": "Комбо 3 пиццы",
+      "category": "Комбо",
+      "composition": "На ваш выбор",
+      "price": 699,
+      "gram": "30см",
+      "id": 30
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/kh1b7tyvyujfyaqzwqit",
+      "name": "Комбо 5 пицц",
+      "category": "Комбо",
+      "composition": "На ваш выбор",
+      "price": 1190,
+      "gram": "30см",
+      "id": 31
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/h6b1ydq5nx9whcaditwu ",
+      "name": "Классическая",
+      "category": "Шаурма",
+      "composition": "Капустный салат, свежие овощи, курица\\говядина, картошка фри, кетчуп, майонез",
+      "price": 145,
+      "gram": "1 шт",
+      "id": 32
+    },
+    {
+      "image": "http://chydo-pir.ru/image/price/B%20шаверма_sm.jpg",
+      "name": "Запеченная",
+      "category": "Шаурма",
+      "composition": "Свежие овощи, курица/говядина, чипсы, сыр, майонез, соус",
+      "price": 150,
+      "gram": "1 шт",
+      "id": 33
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/nxhgeigu52lrh7wpggjd",
+      "name": "Острая",
+      "category": "Шаурма",
+      "composition": "Капустный салат, свежие овощи, курица\\говядина, картошка фри, кетчуп, майонез, острый соус",
+      "price": 160,
+      "gram": "1 шт",
+      "id": 34
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/zi7tatbrgo8lh8wgkw7b",
+      "name": "Мини",
+      "category": "Шаурма",
+      "composition": "Капустный салат, свежие овощи, курица\\говядина, картошка фри, кетчуп, майонез",
+      "price": 125,
+      "gram": "1 шт",
+      "id": 35
+    },
+    {
+      "image": "https://im0-tub-ru.yandex.net/i?id=ff99e9ffe5b98a3a4d518560917a328d-l&n=13",
+      "name": "Сырная",
+      "category": "Шаурма",
+      "composition": "Капустный салат, свежие овощи, курица\\говядина, сыр, картошка фри, кетчуп, майонез",
+      "price": 155,
+      "gram": "1 шт",
+      "id": 36
+    },
+    {
+      "image": "https://img2.freepng.ru/20180403/jxq/kisspng-hamburger-fast-food-cheeseburger-recipe-burguer-5ac3046abebd79.5861960115227300907813.jpg",
+      "name": "Гамбургер",
+      "category": "Гамбургер",
+      "composition": "Капустный салат, свежие овощи, курица\\говядина, картошка фри, кетчуп, майонез",
+      "price": 110,
+      "gram": "1 шт",
+      "id": 37
+    },
+    {
+      "image": "https://static.tildacdn.com/tild3061-6633-4432-b763-316435383032/dts.png",
+      "name": "Хот Дог",
+      "category": "Хот Дог",
+      "composition": "Сосиска, салат, кетчуп, салатный лист",
+      "price": 70,
+      "gram": "1 шт",
+      "id": 39
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/p/AF1QipM_5nBnI5eBLrS_fm_rYbCS-4Tf4SOvZ-2DbIiT=w600-k",
+      "name": "Двойной",
+      "category": "Хот Дог",
+      "composition": "Сосиска(2шт), салат, кетчуп, салатный лист",
+      "price": 90,
+      "gram": "1 шт",
+      "id": 40
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/m5mnjswm1vmahulcoxgh",
+      "name": "Шаурдог",
+      "category": "Хот Дог",
+      "composition": "Капустный салат, свежие овощи, картошка фри, сосиска, кетчуп, майонез",
+      "price": 100,
+      "gram": "1 шт",
+      "id": 41
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Drinks/ru-RU/974d0f71-ba3e-4abf-b0e9-aea03fc345d7.jpg",
+      "name": "Кола",
+      "category": "Холодные напитки",
+      "composition": "Газировка, натуральный краситель карамель",
+      "price": 35,
+      "gram": "0,5 л ",
+      "id": 42
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Drinks/ru-RU/a1d6aff8-cb27-489a-9e2d-01bc29f9303c.jpg",
+      "name": "Фанта",
+      "category": "Холодные напитки",
+      "composition": "Газировка, натуральный краситель карамель",
+      "price": 35,
+      "gram": "0,5 л",
+      "id": 44
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Drinks/ru-RU/d23202fd-fdb8-4e78-83ae-2c787b58e834.jpg",
+      "name": "Спрайт",
+      "category": "Холодные напитки",
+      "composition": "Газировка, натуральный краситель карамель",
+      "price": 35,
+      "gram": "0,5 л",
+      "id": 45
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/4319c360ff3d4e71932b88d3141559a0_1875x1875.jpeg",
+      "name": "Экспрессо",
+      "category": "Горячие напитки",
+      "composition": "Жареные зерна кофе, поваренная соль, сахарный песок",
+      "price": 80,
+      "gram": "120мл",
+      "id": 46
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/4319c360ff3d4e71932b88d3141559a0_1875x1875.jpeg",
+      "name": "Американо",
+      "category": "Горячие напитки",
+      "composition": "Жареные зерна кофе, поваренная соль, сахарный песок, горячая вода",
+      "price": 80,
+      "gram": "120мл",
+      "id": 47
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/88fbb9c7a5264f589d3ead0373bec878_1875x1875.jpeg",
+      "name": "Капучино",
+      "category": "Горячие напитки",
+      "composition": "Жареные зерна кофе, сливки, молоко, сахарный песок, горячая вода",
+      "price": 100,
+      "gram": "120мл",
+      "id": 48
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/bb819eaa7d194feb8c54131c582fd077_292x292.jpeg",
+      "name": "Латте",
+      "category": "Горячие напитки",
+      "composition": "Жареные зерна кофе, сливки, молоко, сахарный песок, молочная пена",
+      "price": 120,
+      "gram": "120мл",
+      "id": 49
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/de16085dca914ef3b119889a76fd9cb7_292x292.jpeg",
+      "name": "Горячий шоколад с маршмэллоу",
+      "category": "Горячие напитки",
+      "composition": "Молоко, шоколад, маршмеллоу, корица",
+      "price": 140,
+      "gram": "120мл",
+      "id": 51
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/b77fa050a48c4a3bb3bbd4d49c718491_1875x1875.jpeg",
+      "name": "Кофе со сливками",
+      "category": "Горячие напитки",
+      "composition": "Кофе растворимый, сахар-песок, сливки жирные, вода",
+      "price": 130,
+      "gram": "120мл",
+      "id": 52
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/Drinks/ru-RU/98a2cad8-4f6d-4341-b2b5-ba07e5d83a32.jpg",
+      "name": "БонАква ",
+      "category": "Холодные напитки",
+      "composition": "Негазированная",
+      "price": 20,
+      "gram": "0,5 л",
+      "id": 53
+    },
+    {
+      "image": "https://api.papajohns.kg//images/catalog/thumbs/full/198e11d0ebc29f6e83ffcc287f62b2c9.webp",
+      "name": "Пиала Ice Tea ",
+      "category": "Холодные напитки",
+      "composition": "Лесные ягоды",
+      "price": 40,
+      "gram": "0,5 л",
+      "id": 54
+    },
+    {
+      "image": "https://api.papajohns.kg//images/catalog/thumbs/full/772faaa79f6f047994326f1e433f4ade.webp",
+      "name": "Пиала Ice Tea",
+      "category": "Холодные напитки",
+      "composition": "Сочный персик",
+      "price": 40,
+      "gram": "0,5 л",
+      "id": 55
+    },
+    {
+      "image": "https://api.papajohns.kg//images/catalog/thumbs/full/8504dad0c225dae82b3f6a198c058abc.webp",
+      "name": "Пиала Ice Tea",
+      "category": "Холодные напитки",
+      "composition": "Манго и ананас",
+      "price": 40,
+      "gram": "0,5 л",
+      "id": 56
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/ddauqlzkzdx3tduyirfq",
+      "name": "Баклажаны в кисло-сладком",
+      "category": "Салаты",
+      "composition": "Баклажан, помидоры черри, соус кисло-сладкий",
+      "price": 280,
+      "gram": "260 гр",
+      "id": 58
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/yaszvotokmgfqlbovlsy",
+      "name": "Свежий салат",
+      "category": "Салаты",
+      "composition": "Огурцы, помидоры, перец болгарский, зелень",
+      "price": 140,
+      "gram": "240 гр",
+      "id": 59
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/tpetheo0u3fhe32vphvx",
+      "name": "\"Цезарь\" с курицей",
+      "category": "Салаты",
+      "composition": "Куриное филе, айсберг, пармезан, листья салата, лолло росса, соус",
+      "price": 250,
+      "gram": "280 гр",
+      "id": 60
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/yd0gt5u15xuqiccfmdkm",
+      "name": "Греческий ",
+      "category": "Салаты",
+      "composition": "Помидоры, огурцы, сыр Фетакса, лимонный дрессинг",
+      "price": 220,
+      "gram": "260 гр",
+      "id": 61
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/vj1fyfowhfvjgx0zodpa",
+      "name": "Пикантный салат с баклажанами",
+      "category": "Салаты",
+      "composition": "Баклажаны, помидоры, чесночный соус",
+      "price": 260,
+      "gram": "280 гр",
+      "id": 62
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/gbxj2muytdduidikuguo",
+      "name": "Боярский",
+      "category": "Салаты",
+      "composition": "Говядина, грузди маринованные, огурцы маринованные, картофель, лук репчатый, майонез",
+      "price": 265,
+      "gram": "280 гр",
+      "id": 63
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/ynq8goxd56kuodatdqbp",
+      "name": "Чечевичный суп ",
+      "category": "Супы",
+      "composition": "Чечевица, крутоны, лимон",
+      "price": 180,
+      "gram": "200 гр",
+      "id": 64
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/lxjsa6eepyvtxtioocaa",
+      "name": "Крем-суп из брокколи с семгой",
+      "category": "Супы",
+      "composition": "Брокколи, цветная капуста, семга слабосоленая",
+      "price": 350,
+      "gram": "380 гр",
+      "id": 65
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/nyh8c20ely3bk2t8jtxn",
+      "name": "Грибной крем-суп",
+      "category": "Супы",
+      "composition": "Шампиньоны, сливки, сметана, крутоны, сливочный сыр",
+      "price": 180,
+      "gram": "200 гр",
+      "id": 66
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/x2sofc45tx489jar0ekb",
+      "name": "Пельмени",
+      "category": "Супы",
+      "composition": "Говяжий бульон, сметана, бон-филе, зелень",
+      "price": 180,
+      "gram": "290 гр",
+      "id": 67
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/oihk3xh0gxuygpaohayw",
+      "name": "Вареники",
+      "category": "Супы",
+      "composition": "Картофель, грибы, сметана",
+      "price": 120,
+      "gram": "250 гр",
+      "id": 68
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/h09xup3hzep5w7cljz0s",
+      "name": "Феттучини с курицей и грибами",
+      "category": "Паста",
+      "composition": "Фетучини, куриное филе, шампиньоны, сливочный соус, сыр Пармезан",
+      "price": 280,
+      "gram": "250 гр",
+      "id": 69
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/kta8zucef6npi3umcqnb",
+      "name": "Феттучини с креветками",
+      "category": "Паста",
+      "composition": "Фетучини, креветки, чеснок, соус томатный, черри, специи, сыр Пармезан",
+      "price": 320,
+      "gram": "350 гр",
+      "id": 70
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/xmdo7fctonwagepfa2oq",
+      "name": "Спагетти Болоньезе ",
+      "category": "Паста",
+      "composition": "Спагетти, сыр Пармезан, томатно-мясной соус \"Болоньезе\"",
+      "price": 350,
+      "gram": "350 гр",
+      "id": 71
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/au3hoahjtblesftaz2hc",
+      "name": "Спагетти с форелью",
+      "category": "Паста",
+      "composition": "Спагетти, филе форели, сливочный соус, брокколи, сыр Пармезан, черри, чеснок",
+      "price": 340,
+      "gram": "370 гр",
+      "id": 72
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/btrr4vwghblcg5d2wchy",
+      "name": "Американский завтрак ",
+      "category": "Завтраки",
+      "composition": "Деревенский хлеб, яйцо, венские колбаски, огурцы, корнишоны, лист салата, кетчуп",
+      "price": 220,
+      "gram": "200 гр",
+      "id": 73
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/cnmhm2eyqygg6oyvrp7f",
+      "name": "Омлет классический",
+      "category": "Завтраки",
+      "composition": "Яйцо куриное, сыр Моцарелла, огурцы, черри, кетчуп",
+      "price": 120,
+      "gram": "180 гр",
+      "id": 74
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/moeiecwrzot7ec1j3pdf",
+      "name": "Омлет с шампиньонами ",
+      "category": "Завтраки",
+      "composition": "Нежный омлет с добавлением шампиньонов, сыра Тильзитского,,микс салата и черри, подается с соусом Барбекю отличный вариант для разнообразного белкового завтрака",
+      "price": 150,
+      "gram": "200 гр",
+      "id": 75
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/npfmqm2prfybfavja6g0",
+      "name": "Сырники",
+      "category": "Завтраки",
+      "composition": "Творог, добавка на выбор: сметана, сгущенное молоко, джем",
+      "price": 120,
+      "gram": "200 гр",
+      "id": 76
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/isxvabxl7kjwh5gdsbbm",
+      "name": "Боул Мексика",
+      "category": "Боул",
+      "composition": "Припушенный рис, помидоры, красный лук, фасоль, курица, салат айсберг, соус сальса",
+      "price": 280,
+      "gram": "300 гр",
+      "id": 78
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/nwvr5ooa20qq2yjpyk2h",
+      "name": "Тофу боул",
+      "category": "Боул",
+      "composition": "Тофу, припушенный рис, помидоры черри, огурцы, салат айсберг, соус понзу",
+      "price": 280,
+      "gram": "300 гр",
+      "id": 79
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/yb1rskyek3cmkn5ogach",
+      "name": "Боул с курицей и лапшой",
+      "category": "Боул",
+      "composition": "Яичная лапша, кабачок, красный лук, перец, шпинат, соус",
+      "price": 280,
+      "gram": "300 гр",
+      "id": 80
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/qpsvcutn1hef0vmqrhz7",
+      "name": "С хрустящей форелью в панко",
+      "category": "Боул",
+      "composition": "Форель в панировке, редис, водоросли чука, авокадо, кинза, шпинат, тыквенные семечки, брокколи, черри, соус ореховый",
+      "price": 420,
+      "gram": "360 гр",
+      "id": 81
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/o1vru1tioctvoizzzos5",
+      "name": "Круассан с лососем (200 гр.) ",
+      "category": "Завтраки",
+      "composition": "Круассан, лосось, огурцы, айсберг, руккола, соусы \"Филадельфия\" и \"Ранч\"",
+      "price": 199,
+      "gram": "200 гр",
+      "id": 82
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/q9jhuk1vnnxstzuklwcn",
+      "name": "Круассан с ветчиной и сыром",
+      "category": "Завтраки",
+      "composition": "Круассан, ветчина куриная, огурцы, помидоры, лист салата, сыр \"Маасдам\", соус \"Ранч\"",
+      "price": 150,
+      "gram": "220 гр",
+      "id": 83
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/iafbk8yfyrjqiyqac8um",
+      "name": "С авокадо и копченой курицей",
+      "category": "Завтраки",
+      "composition": "Круассан с авокадо, копченая курица, помидоры, айсберг, соусы \"Филадельфия\" и \"Песто\"",
+      "price": 199,
+      "gram": "200 гр",
+      "id": 84
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/mod096cv0vqacdevuaya",
+      "name": "Французский сэндвич",
+      "category": "Завтраки",
+      "composition": "Тостерный хлеб, ветчина куриная, яичный кляр, сыр \"Чеддер\", майонез, микс салат",
+      "price": 100,
+      "gram": "95 гр",
+      "id": 85
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/egjadmkohf4jzn2foaul",
+      "name": "Клаб-сэндвич ",
+      "category": "Завтраки",
+      "composition": "Булочка с семенами льна, копченое куриное филе, куриная ветчина, яйцо, лист салата, помидоры, огурцы, фри, майонез, кетчуп, сыр \"Тильзитский\"",
+      "price": 220,
+      "gram": "350 гр",
+      "id": 86
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/towrut6afpbspthkjgy0",
+      "name": "Сэндвич с курицей ",
+      "category": "Завтраки",
+      "composition": "Булочка с семенами льна, копченая курица, помидоры, огурцы, лист салата, майонез, кетчуп, сыр Тильзитский, картофель фри",
+      "price": 170,
+      "gram": "200 гр",
+      "id": 87
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/genhmambrxedjkmotfbk",
+      "name": "Сэндвич с тунцом ",
+      "category": "Завтраки",
+      "composition": "Булочка с семенами льна, тунец, помидоры, фри, корнишоны, майонез, кетчуп, сыр \"Тильзитский\"",
+      "price": 200,
+      "gram": "350 гр",
+      "id": 88
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%93%D0%B0%D1%80%D0%BD%D0%B8%D1%80%20%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%84%D0%B5%D0%BB%D1%8C%20%D0%A4%D1%80%D0%B8.jpg",
+      "name": "Картофель из печи, большой",
+      "category": "Гарниры",
+      "composition": "Ароматный запеченный картофель с итальянскими травами. Большая порция",
+      "price": 120,
+      "gram": "180 гр",
+      "id": 89
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/e34b520f694d4c3a8c750534c89d745e_292x292.jpeg",
+      "name": "Крылья барбекю",
+      "category": "Вторые блюда",
+      "composition": "Куриные крылья со специями и ароматом копчения, большая порция",
+      "price": 290,
+      "gram": "340 гр",
+      "id": 90
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/wijdjsfmmcuv9ph3oyw7",
+      "name": "Форель с овощами на сковороде",
+      "category": "Вторые блюда",
+      "composition": "Форель, болгарский перец, лук репчатый, помидоры, кабачок, стручковая фасоль, чеснок, соус устричный",
+      "price": 310,
+      "gram": "260 гр",
+      "id": 92
+    },
+    {
+      "image": "https://res.cloudinary.com/glovoapp/w_600,f_auto,q_auto/Products/w0nb2sdnfdlbvbbyzth3",
+      "name": "Рис с креветками по-тайски",
+      "composition": "Рис, креветки, древесные грибы, имбирь, шпинат, стручковая фасоль, черри, чеснок, соус устричный, яйцо, соус \"Терияки\"",
+      "price": 360,
+      "gram": "380 гр",
+      "id": 93
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%96%D0%B0%D1%80%D0%B5%D0%BD%D1%8B%D0%B5%20%D0%BC%D0%B0%D0%BD%D1%82%D1%8B.jpg",
+      "name": "Жареные манты с мясом ",
+      "category": "Вторые блюда",
+      "composition": "Мука, яйцо, масло, говядина, бараний жир, лук, соль, перец, масло растительное, острый соус. Манты с мясом, жаренные во фритюре до хрустящей корочки. Подаются с острым фирменным соусом.",
+      "price": 150,
+      "gram": "5 шт",
+      "id": 94
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%9B%D0%B0%D0%B3%D0%BC%D0%B0%D0%BD.jpg",
+      "name": "Лагман",
+      "category": "Вторые блюда",
+      "composition": "Говядина, пекинская капуста, сладкий и полугорький перец, сельдерей, чеснок, лапша. Подаётся с приправой Лаза.",
+      "price": 160,
+      "gram": "500 гр",
+      "id": 95
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%BA%D0%BE%D1%82%D0%BB%D0%B5%D1%82%D0%B0-%D0%BA%D1%83%D1%80%D0%B8%D0%BD%D0%B0%D1%8F.jpg",
+      "name": "Домашние котлетки с пюре",
+      "category": "Вторые блюда",
+      "composition": "Пюре картофельное, котлета из курицы либо из говядины, грибной соус, огурцы маринованные, зелень.",
+      "price": 200,
+      "gram": "350 гр",
+      "id": 96
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%A0%D0%B8%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BB%D0%B0%D0%BF%D1%88%D0%B0%20%D1%81%20%D0%BA%D1%83%D1%80%D0%B8%D1%86%D0%B5%D0%B9.jpg",
+      "name": "Рисовая лапша с курицей ",
+      "category": "Вторые блюда",
+      "composition": "Рисовая лапша, курица, древесные грибы, овощи, устричный соус, кунжут, зелёный лук.",
+      "price": 200,
+      "gram": "310 гр",
+      "id": 97
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%9A%D0%B8%D1%81%D0%BB%D0%BE-%D0%BE%D1%81%D1%82%D1%80%D0%B0%D1%8F%20%D0%BB%D0%B0%D0%BF%D1%88%D0%B0%20%D0%9F%D0%B0%D0%B4-%D0%A2%D0%B0%D0%B9.jpg",
+      "name": "Кисло-острая лапша Пад-тай",
+      "category": "Вторые блюда",
+      "composition": "Лапша, говядина/курица/морепродукты, сыр тофу, овощи, омлет, ростки бамбука, арахис, кинза, лимон, фирменный соус Пад-Тай. ",
+      "price": 310,
+      "gram": "430 гр",
+      "id": 98
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%A0%D0%B8%D1%81%20%D0%BF%D0%BE%20%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8.jpg",
+      "name": "Рис с курицей и креветками ",
+      "category": "Вторые блюда",
+      "composition": "Традиционный жареный острый рис паназиатской кухни с куриным филе и креветками, и оригинальным соусом самбал. Подаётся с маринованными овощами и яичницей глазуньей.",
+      "price": 400,
+      "gram": "350 гр",
+      "id": 99
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%9E%D1%80%D0%BE%D0%BC%D0%BE.jpg",
+      "name": "Оромо",
+      "category": "Вторые блюда",
+      "composition": "Традиционное блюдо Восточной кухни. Рулет из тонкого теста с мясной начинкой и картофелем.",
+      "price": 180,
+      "gram": "300 гр",
+      "id": 100
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%9C%D1%8F%D1%81%D0%BE%20%D0%BF%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%B8.jpg",
+      "name": "Мясо по-французски",
+      "category": "Вторые блюда",
+      "composition": "Нежная говядина, картофель, сыр.",
+      "price": 235,
+      "gram": "350 гр",
+      "id": 101
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%A1%D1%82%D0%B5%D0%B9%D0%BA%20%D0%BB%D0%BE%D1%81%D0%BE%D1%81%D1%8F%20%D1%81%20%D1%81%D0%BE%D1%83%D1%81%D0%BE%D0%BC%20%D1%82%D0%B5%D1%80%D0%B8%D1%8F%D0%BA%D0%B8.png",
+      "name": "Стейк лосося с соусом терияки",
+      "category": "Стейки",
+      "composition": "Лосось, соус терияки, подаётся c рисом",
+      "price": 550,
+      "gram": "***",
+      "id": 102
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%A1%D1%82%D0%B5%D0%B9%D0%BA%20%D0%BB%D0%BE%D1%81%D0%BE%D1%81%D1%8F%20%D0%BF%D0%BE%D0%B4%20%D0%B8%D0%BA%D0%BE%D1%80%D0%BD%D1%8B%D0%BC%20%D1%81%D0%BE%D1%83%D1%81%D0%BE%D0%BC.png",
+      "name": "Лосось под икорным соусом",
+      "category": "Стейки",
+      "composition": "Стейк из лосося под икорным соусом, брокколи",
+      "price": 650,
+      "gram": "***",
+      "id": 103
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/2021/%D0%94%D0%B5%D1%81%D0%B5%D1%80%D1%82%D1%8B/%D1%82%D0%B0%D1%80%D1%82%D0%B0%D0%BB%D0%B5%D1%82%D0%BA%D0%B0%20%D1%81%20%D1%81%D0%BE%D0%BB%D0%B5%D0%BD%D0%BE%D0%B9%20%D0%BA%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D0%BB%D1%8C%D1%8E.jpg",
+      "name": "Тарталетка с карамелью ",
+      "category": "Дессерты",
+      "composition": "мука миндальная, яйцо куриное пищевое, глюкозный сироп, молоко цельное сгущенное с сахаром (молоко нормализованное, сахар (сахароза, лактоза), дутый рис (экспондированный), желатин пищевой, соль пищевая.",
+      "price": 150,
+      "gram": "1 шт",
+      "id": 104
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%9F%D0%B8%D1%80%D0%BE%D0%B6%D0%BD%D0%BE%D0%B5%20%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%88%D0%BA%D0%B0.jpg",
+      "name": "Трюфельное пирожное «Картошка»",
+      "category": "Дессерты",
+      "composition": "Главное шоколадное лакомство из нашего детства, состоящее из печенья, сгущённого молока, какао и орехов.",
+      "price": 120,
+      "gram": "2 шт",
+      "id": 105
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/2021/%D0%94%D0%B5%D1%81%D0%B5%D1%80%D1%82%D1%8B/%D0%BA%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B1%D1%80%D0%B0%D1%83%D0%BD%D0%B8_2021.jpg",
+      "name": "Карамельный брауни",
+      "category": "Дессерты",
+      "composition": "Вода, сахар, загуститель крахмал кукурузный, сыворотка молочная сухая, масло растительное, соль, карамельный сироп, регуляторы кислотности: цитрат натрия, молочная кислота; антиокислитель токоферолы, концентрат смеси",
+      "price": 180,
+      "gram": "***",
+      "id": 106
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/2021/%D0%94%D0%B5%D1%81%D0%B5%D1%80%D1%82%D1%8B/%D1%82%D1%80%D0%B8%20%D1%88%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%D0%B0_2021.jpg",
+      "name": "Три шоколада",
+      "category": "Дессерты",
+      "composition": "Легкий торт из трех видов шоколада, черного, молочного и белого, сочетается с тонким шоколадным бисквитом на ореховой муке.",
+      "price": 220,
+      "gram": "***",
+      "id": 107
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/kruassan_classik.jpg",
+      "name": "Классический круассан",
+      "category": "Дессерты",
+      "composition": "Мука, яйцо, масло, молоко",
+      "price": 50,
+      "gram": "1 шт",
+      "id": 108
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/kruassan_s_chokoladom.jpg",
+      "name": "Шоколадный круассан",
+      "category": "Дессерты",
+      "composition": "Мука, яйцо, масло, молоко, шоколад",
+      "price": 70,
+      "gram": "1 шт",
+      "id": 109
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%93%D0%B0%D1%80%D0%BD%D0%B8%D1%80%20%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%84%D0%B5%D0%BB%D1%8C%20%D0%BF%D0%BE-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B8.jpg",
+      "name": "Картофель по-деревенски",
+      "category": "Гарниры",
+      "composition": "Картофель, масло растительное, специи, майонез, кетчуп.",
+      "price": 120,
+      "gram": "150 гр",
+      "id": 110
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%93%D0%B0%D1%80%D0%BD%D0%B8%D1%80%20%D0%A0%D0%B8%D1%81.jpg",
+      "name": "Рис отварной",
+      "category": "Гарниры",
+      "composition": "Рис, вода, кунжут",
+      "price": 50,
+      "gram": "150 гр",
+      "id": 111
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/2021/%D0%91%D0%BB%D1%8E%D0%B4%D0%B0/%D0%9F%D1%8E%D1%80%D0%B5%20%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5.jpg",
+      "name": "Картофельное пюре",
+      "category": "Гарниры",
+      "composition": "Картофель, вода, зелень.",
+      "price": 60,
+      "gram": "150 гр",
+      "id": 112
+    },
+    {
+      "image": "https://mobile.mypizza.kg/jpg/%D0%93%D0%B0%D1%80%D0%BD%D0%B8%D1%80%20%D0%9A%D1%80%D0%BE%D0%BA%D0%B5%D1%82%D1%8B.jpg",
+      "name": "Крокеты",
+      "category": "Гарниры",
+      "composition": "Картофель, масло растительное, специи, майонез, кетчуп",
+      "price": 150,
+      "gram": "150 гр",
+      "id": 113
+    },
+    {
+      "image": "https://dodopizza-a.akamaihd.net/static/Img/Products/de16085dca914ef3b119889a76fd9cb7_292x292.jpeg",
+      "name": "Двойной",
+      "category": "Гамбургер",
+      "composition": "На ваш выбор",
+      "price": 100,
+      "gram": "200 гр",
+      "id": 114
+    }
+  ]
+}

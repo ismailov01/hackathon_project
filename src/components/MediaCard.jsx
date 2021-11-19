@@ -18,17 +18,8 @@ const MediaCard = (props) => {
   const [modalShow, setModalShow] = React.useState(false);
     console.log(props);
 
-    // const [isFlipped, setIsFlipped] = useState(false)
-    // const handleClick = (() => {
-    //   setIsFlipped(!isFlipped)
-    // })
-
-    // useEffect(() => {
-    //   getProducts()
-    // },[])
     return (
-      // <ReactCardFlip isFlipped={isFlipped}>
-        <Card sx={{ maxWidth: 300, margin: '10px'}} 
+        <Card sx={{ maxWidth: 280, margin: '10px', borderRadius: "20px", height: "350px", border: "1px solid black"}} 
         className='cartochka'>
       <CardMedia
         component="img"
@@ -38,10 +29,10 @@ const MediaCard = (props) => {
         alt="product"
         />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" style={{fontWeight: "bold", fontFamily: "revert"}}>
           {props.product.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary" style={{ fontSize: "20px"}}>
+        <Typography variant="body2" color="text.secondary" style={{ fontSize: "20px", fontFamily: "revert", fontWeight: "600"}}>
           {props.product.price} сом
         </Typography>
       </CardContent>
@@ -53,7 +44,7 @@ const MediaCard = (props) => {
             <FavoriteIcon color={checkFavoriteInFavorites(props.product.id) ? 'error' : 'primary'} />
         </Button>
         {/* <Link to={`/product/${props.product.id}`}> */}
-        <Button size="small"
+        <Button size="small" style={{fontFamily: "revert"}}
         variant="contained" onClick={()=> setModalShow(true)}>Подробнее</Button>
         {/* </Link> */}
         <DetailModal

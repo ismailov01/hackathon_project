@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url("https://st4.depositphotos.com/1558912/20620/i/600/depositphotos_206202686-stock-photo-food-cooking-background-on-black.jpg");
+  color: white;
 }
 
 code {
@@ -15,6 +16,7 @@ code {
 }
 
 .add-page, .edit-page {
+  color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -22,12 +24,14 @@ code {
 }
 
 .add-page form, .edit-page form {
+  color: white;
   display: flex;
   flex-direction: column;
   width: 400px;
 }
 
 .add-page form input, .edit-page form input {
+  color: white;
   margin: 5px;
 }
 
@@ -81,11 +85,6 @@ code {
   display: flex;
   align-items: center;
 }
-
-body {
-  background: url("https://st4.depositphotos.com/1558912/20620/i/600/depositphotos_206202686-stock-photo-food-cooking-background-on-black.jpg");
-}
-
 .image {
   width: 300px;
 }
@@ -100,7 +99,32 @@ body {
 }
 
 .modal-content {
-  background: linear-gradient(to right, rgba(151, 151, 151, 0.645) 36%, rgba(131, 131, 131, 0.494) 40%);
+  background: linear-gradient(to right, rgba(138, 138, 138, 0.522) 0%, rgba(110, 113, 114, 0.549) 36%, rgba(69, 74, 77, 0.878) 100%);
   font-weight: 650;
 }
-
+@media screen and (max-width: 1025px){
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+}
+@media screen and (max-width: 426px){
+  .home-page {
+    display: flex;
+    color: white;
+}
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 79%;
+}
+.css-ahj2mt-MuiTypography-root {
+  font-size: 12px !important;
+}
+.category_h2 {
+  font-size: 20px !important;
+}
+.pagination {
+  width: 90%;
+}
+}

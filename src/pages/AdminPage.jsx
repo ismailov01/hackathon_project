@@ -6,9 +6,9 @@ import BasicTable from "../components/BasicTable";
 const AdminPage = () => {
   return (
     <div>
-      <h2>Admin Page</h2>
+      <h2 style={{color: 'white'}}>Admin Page</h2>
       <Link to="/add">
-        <Button variant="outlined" color="info">
+        <Button variant="contained" color="error">
           Add product
         </Button>
       </Link>

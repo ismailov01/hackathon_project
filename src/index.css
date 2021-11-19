@@ -16,22 +16,23 @@ code {
 }
 
 .add-page, .edit-page {
-  color: white;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
 }
 
 .add-page form, .edit-page form {
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   width: 400px;
 }
 
 .add-page form input, .edit-page form input {
-  color: white;
+  color: rgb(0, 0, 0);
   margin: 5px;
 }
 
@@ -112,6 +113,9 @@ code {
   .home-page {
     display: flex;
     color: white;
+}
+.btn2{
+  font-size: 9.3px;
 }
 .products {
   display: grid;

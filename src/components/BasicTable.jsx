@@ -69,7 +69,7 @@ export default function BasicTable() {
           </Table>
         </TableContainer>
       ) : (
-        <h2>Loading...</h2>
+        <h2 style={{color: 'white'}}>Loading...</h2>
       )}
     </>
   );

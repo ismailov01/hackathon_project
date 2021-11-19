@@ -44,8 +44,8 @@ const MediaCard = (props) => {
             <FavoriteIcon color={checkFavoriteInFavorites(props.product.id) ? 'error' : 'primary'} />
         </Button>
         {/* <Link to={`/product/${props.product.id}`}> */}
-        <Button size="small" style={{fontFamily: "revert"}}
-        variant="contained" onClick={()=> setModalShow(true)}>Подробнее</Button>
+        <Button  size="small" style={{fontFamily: "revert"}}
+            variant="contained" onClick={() => setModalShow(true)}><small className="btn2">Подробнее</small></Button>
         {/* </Link> */}
         <DetailModal
         show={modalShow}
